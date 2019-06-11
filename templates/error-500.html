@@ -1,61 +1,66 @@
 <html lang="en">
 <head>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
 <meta charset="utf-8"/>
-<title>500错误页面 - Bootstrap后台管理系统模版Ace下载</title>
-<meta content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" name="keywords"/>
-<meta content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" name="description"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- basic styles -->
+<title>500 Error Page - Ace Admin</title>
+<meta content="500 Error Page" name="description"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+<!-- bootstrap & fontawesome -->
 <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet"/>
-<link href="{{ url_for('static', filename='assets/css/font-awesome.min.css') }}" rel="stylesheet"/>
-<!--[if IE 7]>
-		  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/font-awesome-ie7.min.css') }}" />
-		<![endif]-->
+<link href="{{ url_for('static', filename='assets/font-awesome/4.5.0/css/font-awesome.min.css') }}" rel="stylesheet"/>
 <!-- page specific plugin styles -->
-<!-- fonts -->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet"/>
+<!-- text fonts -->
+<link href="{{ url_for('static', filename='assets/css/fonts.googleapis.com.css') }}" rel="stylesheet"/>
 <!-- ace styles -->
-<link href="{{ url_for('static', filename='assets/css/ace.min.css') }}" rel="stylesheet"/>
-<link href="{{ url_for('static', filename='assets/css/ace-rtl.min.css') }}" rel="stylesheet"/>
+<link class="ace-main-stylesheet" href="{{ url_for('static', filename='assets/css/ace.min.css') }}" id="main-ace-style" rel="stylesheet"/>
+<!--[if lte IE 9]>
+			<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ace-part2.min.css') }}" class="ace-main-stylesheet" />
+		<![endif]-->
 <link href="{{ url_for('static', filename='assets/css/ace-skins.min.css') }}" rel="stylesheet"/>
-<!--[if lte IE 8]>
+<link href="{{ url_for('static', filename='assets/css/ace-rtl.min.css') }}" rel="stylesheet"/>
+<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ace-ie.min.css') }}" />
 		<![endif]-->
 <!-- inline styles related to this page -->
 <!-- ace settings handler -->
 <script src="{{ url_for('static', filename='assets/js/ace-extra.min.js') }}"></script>
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-		<script src="{{ url_for('static', filename='assets/js/html5shiv.js') }}"></script>
+<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+<!--[if lte IE 8]>
+		<script src="{{ url_for('static', filename='assets/js/html5shiv.min.js') }}"></script>
 		<script src="{{ url_for('static', filename='assets/js/respond.min.js') }}"></script>
 		<![endif]-->
 </head>
-<body>
-<div class="navbar navbar-default" id="navbar">
-<script type="text/javascript">
-				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
-			</script>
-<div class="navbar-container" id="navbar-container">
+<body class="no-skin">
+<div class="navbar navbar-default ace-save-state" id="navbar">
+<div class="navbar-container ace-save-state" id="navbar-container">
+<button class="navbar-toggle menu-toggler pull-left" data-target="#sidebar" id="menu-toggler" type="button">
+<span class="sr-only">Toggle sidebar</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
 <div class="navbar-header pull-left">
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="index">
 <small>
-<i class="icon-leaf"></i>
+<i class="fa fa-leaf"></i>
 							Ace Admin
 						</small>
-</a><!-- /.brand -->
-</div><!-- /.navbar-header -->
-<div class="navbar-header pull-right" role="navigation">
+</a>
+</div>
+<div class="navbar-buttons navbar-header pull-right" role="navigation">
 <ul class="nav ace-nav">
-<li class="grey">
+<li class="grey dropdown-modal">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-<i class="icon-tasks"></i>
+<i class="ace-icon fa fa-tasks"></i>
 <span class="badge badge-grey">4</span>
 </a>
-<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
 <li class="dropdown-header">
-<i class="icon-ok"></i>
+<i class="ace-icon fa fa-check"></i>
 									4 Tasks to complete
 								</li>
+<li class="dropdown-content">
+<ul class="dropdown-menu dropdown-navbar">
 <li>
 <a href="#">
 <div class="clearfix">
@@ -100,48 +105,52 @@
 </div>
 </a>
 </li>
-<li>
+</ul>
+</li>
+<li class="dropdown-footer">
 <a href="#">
 										See tasks with details
-										<i class="icon-arrow-right"></i>
+										<i class="ace-icon fa fa-arrow-right"></i>
 </a>
 </li>
 </ul>
 </li>
-<li class="purple">
+<li class="purple dropdown-modal">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-<i class="icon-bell-alt icon-animated-bell"></i>
+<i class="ace-icon fa fa-bell icon-animated-bell"></i>
 <span class="badge badge-important">8</span>
 </a>
-<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
 <li class="dropdown-header">
-<i class="icon-warning-sign"></i>
+<i class="ace-icon fa fa-exclamation-triangle"></i>
 									8 Notifications
 								</li>
+<li class="dropdown-content">
+<ul class="dropdown-menu dropdown-navbar navbar-pink">
 <li>
 <a href="#">
 <div class="clearfix">
 <span class="pull-left">
-<i class="btn btn-xs no-hover btn-pink icon-comment"></i>
-												New Comments
-											</span>
+<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+														New Comments
+													</span>
 <span class="pull-right badge badge-info">+12</span>
 </div>
 </a>
 </li>
 <li>
 <a href="#">
-<i class="btn btn-xs btn-primary icon-user"></i>
-										Bob just signed up as an editor ...
-									</a>
+<i class="btn btn-xs btn-primary fa fa-user"></i>
+												Bob just signed up as an editor ...
+											</a>
 </li>
 <li>
 <a href="#">
 <div class="clearfix">
 <span class="pull-left">
-<i class="btn btn-xs no-hover btn-success icon-shopping-cart"></i>
-												New Orders
-											</span>
+<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+														New Orders
+													</span>
 <span class="pull-right badge badge-success">+8</span>
 </div>
 </a>
@@ -150,144 +159,176 @@
 <a href="#">
 <div class="clearfix">
 <span class="pull-left">
-<i class="btn btn-xs no-hover btn-info icon-twitter"></i>
-												Followers
-											</span>
+<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+														Followers
+													</span>
 <span class="pull-right badge badge-info">+11</span>
 </div>
 </a>
 </li>
-<li>
+</ul>
+</li>
+<li class="dropdown-footer">
 <a href="#">
 										See all notifications
-										<i class="icon-arrow-right"></i>
+										<i class="ace-icon fa fa-arrow-right"></i>
 </a>
 </li>
 </ul>
 </li>
-<li class="green">
+<li class="green dropdown-modal">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-<i class="icon-envelope icon-animated-vertical"></i>
+<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
 <span class="badge badge-success">5</span>
 </a>
-<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
 <li class="dropdown-header">
-<i class="icon-envelope-alt"></i>
+<i class="ace-icon fa fa-envelope-o"></i>
 									5 Messages
 								</li>
+<li class="dropdown-content">
+<ul class="dropdown-menu dropdown-navbar">
 <li>
-<a href="#">
-<img alt="Alex's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/avatars/avatar.png') }}"/>
+<a class="clearfix" href="#">
+<img alt="Alex's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar.png') }}"/>
 <span class="msg-body">
 <span class="msg-title">
 <span class="blue">Alex:</span>
-												Ciao sociis natoque penatibus et auctor ...
-											</span>
+														Ciao sociis natoque penatibus et auctor ...
+													</span>
 <span class="msg-time">
-<i class="icon-time"></i>
+<i class="ace-icon fa fa-clock-o"></i>
 <span>a moment ago</span>
 </span>
 </span>
 </a>
 </li>
 <li>
-<a href="#">
-<img alt="Susan's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/avatars/avatar3.png') }}"/>
+<a class="clearfix" href="#">
+<img alt="Susan's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar3.png') }}"/>
 <span class="msg-body">
 <span class="msg-title">
 <span class="blue">Susan:</span>
-												Vestibulum id ligula porta felis euismod ...
-											</span>
+														Vestibulum id ligula porta felis euismod ...
+													</span>
 <span class="msg-time">
-<i class="icon-time"></i>
+<i class="ace-icon fa fa-clock-o"></i>
 <span>20 minutes ago</span>
 </span>
 </span>
 </a>
 </li>
 <li>
-<a href="#">
-<img alt="Bob's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/avatars/avatar4.png') }}"/>
+<a class="clearfix" href="#">
+<img alt="Bob's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar4.png') }}"/>
 <span class="msg-body">
 <span class="msg-title">
 <span class="blue">Bob:</span>
-												Nullam quis risus eget urna mollis ornare ...
-											</span>
+														Nullam quis risus eget urna mollis ornare ...
+													</span>
 <span class="msg-time">
-<i class="icon-time"></i>
+<i class="ace-icon fa fa-clock-o"></i>
 <span>3:15 pm</span>
 </span>
 </span>
 </a>
 </li>
 <li>
-<a href="inbox">
-										See all messages
-										<i class="icon-arrow-right"></i>
+<a class="clearfix" href="#">
+<img alt="Kate's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar2.png') }}"/>
+<span class="msg-body">
+<span class="msg-title">
+<span class="blue">Kate:</span>
+														Ciao sociis natoque eget urna mollis ornare ...
+													</span>
+<span class="msg-time">
+<i class="ace-icon fa fa-clock-o"></i>
+<span>1:33 pm</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a class="clearfix" href="#">
+<img alt="Fred's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar5.png') }}"/>
+<span class="msg-body">
+<span class="msg-title">
+<span class="blue">Fred:</span>
+														Vestibulum id penatibus et auctor  ...
+													</span>
+<span class="msg-time">
+<i class="ace-icon fa fa-clock-o"></i>
+<span>10:09 am</span>
+</span>
+</span>
 </a>
 </li>
 </ul>
 </li>
-<li class="light-blue">
+<li class="dropdown-footer">
+<a href="inbox">
+										See all messages
+										<i class="ace-icon fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</li>
+<li class="light-blue dropdown-modal">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-<img alt="Jason's Photo" class="nav-user-photo" src="{{ url_for('static', filename='assets/avatars/user.jpg') }}"/>
+<img alt="Jason's Photo" class="nav-user-photo" src="{{ url_for('static', filename='assets/images/avatars/user.jpg') }}"/>
 <span class="user-info">
 <small>Welcome,</small>
 									Jason
 								</span>
-<i class="icon-caret-down"></i>
+<i class="ace-icon fa fa-caret-down"></i>
 </a>
-<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 <li>
 <a href="#">
-<i class="icon-cog"></i>
+<i class="ace-icon fa fa-cog"></i>
 										Settings
 									</a>
 </li>
 <li>
-<a href="#">
-<i class="icon-user"></i>
+<a href="profile">
+<i class="ace-icon fa fa-user"></i>
 										Profile
 									</a>
 </li>
 <li class="divider"></li>
 <li>
 <a href="#">
-<i class="icon-off"></i>
+<i class="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>
 </li>
 </ul>
 </li>
-</ul><!-- /.ace-nav -->
-</div><!-- /.navbar-header -->
-</div><!-- /.container -->
+</ul>
 </div>
-<div class="main-container" id="main-container">
+</div><!-- /.navbar-container -->
+</div>
+<div class="main-container ace-save-state" id="main-container">
 <script type="text/javascript">
-				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+				try{ace.settings.loadState('main-container')}catch(e){}
 			</script>
-<div class="main-container-inner">
-<a class="menu-toggler" href="#" id="menu-toggler">
-<span class="menu-text"></span>
-</a>
-<div class="sidebar" id="sidebar">
+<div class="sidebar responsive ace-save-state" id="sidebar">
 <script type="text/javascript">
-						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
-					</script>
+					try{ace.settings.loadState('sidebar')}catch(e){}
+				</script>
 <div class="sidebar-shortcuts" id="sidebar-shortcuts">
 <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
 <button class="btn btn-success">
-<i class="icon-signal"></i>
+<i class="ace-icon fa fa-signal"></i>
 </button>
 <button class="btn btn-info">
-<i class="icon-pencil"></i>
+<i class="ace-icon fa fa-pencil"></i>
 </button>
 <button class="btn btn-warning">
-<i class="icon-group"></i>
+<i class="ace-icon fa fa-users"></i>
 </button>
 <button class="btn btn-danger">
-<i class="icon-cogs"></i>
+<i class="ace-icon fa fa-cogs"></i>
 </button>
 </div>
 <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
@@ -296,294 +337,468 @@
 <span class="btn btn-warning"></span>
 <span class="btn btn-danger"></span>
 </div>
-</div><!-- #sidebar-shortcuts -->
+</div><!-- /.sidebar-shortcuts -->
 <ul class="nav nav-list">
-<li class="active">
+<li class="">
 <a href="index">
-<i class="icon-dashboard"></i>
-<span class="menu-text"> 控制台 </span>
+<i class="menu-icon fa fa-tachometer"></i>
+<span class="menu-text"> Dashboard </span>
 </a>
+<b class="arrow"></b>
 </li>
-<li>
-<a href="typography">
-<i class="icon-text-width"></i>
-<span class="menu-text"> 文字排版 </span>
-</a>
-</li>
-<li>
+<li class="">
 <a class="dropdown-toggle" href="#">
-<i class="icon-desktop"></i>
-<span class="menu-text"> UI 组件 </span>
-<b class="arrow icon-angle-down"></b>
-</a>
-<ul class="submenu">
-<li>
-<a href="elements">
-<i class="icon-double-angle-right"></i>
-										组件
-									</a>
-</li>
-<li>
-<a href="buttons">
-<i class="icon-double-angle-right"></i>
-										按钮 &amp; 图表
-									</a>
-</li>
-<li>
-<a href="treeview">
-<i class="icon-double-angle-right"></i>
-										树菜单
-									</a>
-</li>
-<li>
-<a href="jquery-ui">
-<i class="icon-double-angle-right"></i>
-										jQuery UI
-									</a>
-</li>
-<li>
-<a href="nestable-list">
-<i class="icon-double-angle-right"></i>
-										可拖拽列表
-									</a>
-</li>
-<li>
-<a class="dropdown-toggle" href="#">
-<i class="icon-double-angle-right"></i>
-
-										三级菜单
-										<b class="arrow icon-angle-down"></b>
-</a>
-<ul class="submenu">
-<li>
-<a href="#">
-<i class="icon-leaf"></i>
-												第一级
-											</a>
-</li>
-<li>
-<a class="dropdown-toggle" href="#">
-<i class="icon-pencil"></i>
-
-												第四级
-												<b class="arrow icon-angle-down"></b>
-</a>
-<ul class="submenu">
-<li>
-<a href="#">
-<i class="icon-plus"></i>
-														添加产品
-													</a>
-</li>
-<li>
-<a href="#">
-<i class="icon-eye-open"></i>
-														查看商品
-													</a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<a class="dropdown-toggle" href="#">
-<i class="icon-list"></i>
-<span class="menu-text"> 表格 </span>
-<b class="arrow icon-angle-down"></b>
-</a>
-<ul class="submenu">
-<li>
-<a href="tables">
-<i class="icon-double-angle-right"></i>
-										简单 &amp; 动态
-									</a>
-</li>
-<li>
-<a href="jqgrid">
-<i class="icon-double-angle-right"></i>
-										jqGrid plugin
-									</a>
-</li>
-</ul>
-</li>
-<li>
-<a class="dropdown-toggle" href="#">
-<i class="icon-edit"></i>
-<span class="menu-text"> 表单 </span>
-<b class="arrow icon-angle-down"></b>
-</a>
-<ul class="submenu">
-<li>
-<a href="form-elements">
-<i class="icon-double-angle-right"></i>
-										表单组件
-									</a>
-</li>
-<li>
-<a href="form-wizard">
-<i class="icon-double-angle-right"></i>
-										向导提示 &amp; 验证
-									</a>
-</li>
-<li>
-<a href="wysiwyg">
-<i class="icon-double-angle-right"></i>
-										编辑器
-									</a>
-</li>
-<li>
-<a href="dropzone">
-<i class="icon-double-angle-right"></i>
-										文件上传
-									</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="widgets">
-<i class="icon-list-alt"></i>
-<span class="menu-text"> 插件 </span>
-</a>
-</li>
-<li>
-<a href="calendar">
-<i class="icon-calendar"></i>
+<i class="menu-icon fa fa-desktop"></i>
 <span class="menu-text">
-									日历
-									<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-<i class="icon-warning-sign red bigger-130"></i>
-</span>
-</span>
+								UI &amp; Elements
+							</span>
+<b class="arrow fa fa-angle-down"></b>
 </a>
-</li>
-<li>
-<a href="gallery">
-<i class="icon-picture"></i>
-<span class="menu-text"> 相册 </span>
-</a>
-</li>
-<li>
-<a class="dropdown-toggle" href="#">
-<i class="icon-tag"></i>
-<span class="menu-text"> 更多页面 </span>
-<b class="arrow icon-angle-down"></b>
-</a>
+<b class="arrow"></b>
 <ul class="submenu">
-<li>
+<li class="">
+<a class="dropdown-toggle" href="#">
+<i class="menu-icon fa fa-caret-right"></i>
+
+									Layouts
+									<b class="arrow fa fa-angle-down"></b>
+</a>
+<b class="arrow"></b>
+<ul class="submenu">
+<li class="">
+<a href="top-menu">
+<i class="menu-icon fa fa-caret-right"></i>
+											Top Menu
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="two-menu-1">
+<i class="menu-icon fa fa-caret-right"></i>
+											Two Menus 1
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="two-menu-2">
+<i class="menu-icon fa fa-caret-right"></i>
+											Two Menus 2
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="mobile-menu-1">
+<i class="menu-icon fa fa-caret-right"></i>
+											Default Mobile Menu
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="mobile-menu-2">
+<i class="menu-icon fa fa-caret-right"></i>
+											Mobile Menu 2
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="mobile-menu-3">
+<i class="menu-icon fa fa-caret-right"></i>
+											Mobile Menu 3
+										</a>
+<b class="arrow"></b>
+</li>
+</ul>
+</li>
+<li class="">
+<a href="typography">
+<i class="menu-icon fa fa-caret-right"></i>
+									Typography
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="elements">
+<i class="menu-icon fa fa-caret-right"></i>
+									Elements
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="buttons">
+<i class="menu-icon fa fa-caret-right"></i>
+									Buttons &amp; Icons
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="content-slider">
+<i class="menu-icon fa fa-caret-right"></i>
+									Content Sliders
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="treeview">
+<i class="menu-icon fa fa-caret-right"></i>
+									Treeview
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="jquery-ui">
+<i class="menu-icon fa fa-caret-right"></i>
+									jQuery UI
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="nestable-list">
+<i class="menu-icon fa fa-caret-right"></i>
+									Nestable Lists
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a class="dropdown-toggle" href="#">
+<i class="menu-icon fa fa-caret-right"></i>
+
+									Three Level Menu
+									<b class="arrow fa fa-angle-down"></b>
+</a>
+<b class="arrow"></b>
+<ul class="submenu">
+<li class="">
+<a href="#">
+<i class="menu-icon fa fa-leaf green"></i>
+											Item #1
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a class="dropdown-toggle" href="#">
+<i class="menu-icon fa fa-pencil orange"></i>
+
+											4th level
+											<b class="arrow fa fa-angle-down"></b>
+</a>
+<b class="arrow"></b>
+<ul class="submenu">
+<li class="">
+<a href="#">
+<i class="menu-icon fa fa-plus purple"></i>
+													Add Product
+												</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="#">
+<i class="menu-icon fa fa-eye pink"></i>
+													View Products
+												</a>
+<b class="arrow"></b>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<a class="dropdown-toggle" href="#">
+<i class="menu-icon fa fa-list"></i>
+<span class="menu-text"> Tables </span>
+<b class="arrow fa fa-angle-down"></b>
+</a>
+<b class="arrow"></b>
+<ul class="submenu">
+<li class="">
+<a href="tables">
+<i class="menu-icon fa fa-caret-right"></i>
+									Simple &amp; Dynamic
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="jqgrid">
+<i class="menu-icon fa fa-caret-right"></i>
+									jqGrid plugin
+								</a>
+<b class="arrow"></b>
+</li>
+</ul>
+</li>
+<li class="">
+<a class="dropdown-toggle" href="#">
+<i class="menu-icon fa fa-pencil-square-o"></i>
+<span class="menu-text"> Forms </span>
+<b class="arrow fa fa-angle-down"></b>
+</a>
+<b class="arrow"></b>
+<ul class="submenu">
+<li class="">
+<a href="form-elements">
+<i class="menu-icon fa fa-caret-right"></i>
+									Form Elements
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="form-elements-2">
+<i class="menu-icon fa fa-caret-right"></i>
+									Form Elements 2
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="form-wizard">
+<i class="menu-icon fa fa-caret-right"></i>
+									Wizard &amp; Validation
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="wysiwyg">
+<i class="menu-icon fa fa-caret-right"></i>
+									Wysiwyg &amp; Markdown
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="dropzone">
+<i class="menu-icon fa fa-caret-right"></i>
+									Dropzone File Upload
+								</a>
+<b class="arrow"></b>
+</li>
+</ul>
+</li>
+<li class="">
+<a href="widgets">
+<i class="menu-icon fa fa-list-alt"></i>
+<span class="menu-text"> Widgets </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="calendar">
+<i class="menu-icon fa fa-calendar"></i>
+<span class="menu-text">
+								Calendar
+
+								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
+</span>
+</span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="gallery">
+<i class="menu-icon fa fa-picture-o"></i>
+<span class="menu-text"> Gallery </span>
+</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a class="dropdown-toggle" href="#">
+<i class="menu-icon fa fa-tag"></i>
+<span class="menu-text"> More Pages </span>
+<b class="arrow fa fa-angle-down"></b>
+</a>
+<b class="arrow"></b>
+<ul class="submenu">
+<li class="">
 <a href="profile">
-<i class="icon-double-angle-right"></i>
-										用户信息
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									User Profile
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="inbox">
-<i class="icon-double-angle-right"></i>
-										收件箱
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Inbox
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="pricing">
-<i class="icon-double-angle-right"></i>
-										售价单
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Pricing Tables
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="invoice">
-<i class="icon-double-angle-right"></i>
-										购物车
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Invoice
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="timeline">
-<i class="icon-double-angle-right"></i>
-										时间轴
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Timeline
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
+<a href="search">
+<i class="menu-icon fa fa-caret-right"></i>
+									Search Results
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="email">
+<i class="menu-icon fa fa-caret-right"></i>
+									Email Templates
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
 <a href="login">
-<i class="icon-double-angle-right"></i>
-										登录 &amp; 注册
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Login &amp; Register
+								</a>
+<b class="arrow"></b>
 </li>
 </ul>
 </li>
 <li class="active open">
 <a class="dropdown-toggle" href="#">
-<i class="icon-file-alt"></i>
+<i class="menu-icon fa fa-file-o"></i>
 <span class="menu-text">
-									其他页面
-									<span class="badge badge-primary">5</span>
+								Other Pages
+
+								<span class="badge badge-primary">5</span>
 </span>
-<b class="arrow icon-angle-down"></b>
+<b class="arrow fa fa-angle-down"></b>
 </a>
+<b class="arrow"></b>
 <ul class="submenu">
-<li>
+<li class="">
 <a href="faq">
-<i class="icon-double-angle-right"></i>
-										帮助
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									FAQ
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="error-404">
-<i class="icon-double-angle-right"></i>
-										404错误页面
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Error 404
+								</a>
+<b class="arrow"></b>
 </li>
 <li class="active">
 <a href="error-500">
-<i class="icon-double-angle-right"></i>
-										500错误页面
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Error 500
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="grid">
-<i class="icon-double-angle-right"></i>
-										网格
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Grid
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="blank">
-<i class="icon-double-angle-right"></i>
-										空白页面
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Blank Page
+								</a>
+<b class="arrow"></b>
 </li>
 </ul>
 </li>
 </ul><!-- /.nav-list -->
-<div class="sidebar-collapse" id="sidebar-collapse">
-<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+<i class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right" id="sidebar-toggle-icon"></i>
 </div>
-<script type="text/javascript">
-						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
-					</script>
 </div>
 <div class="main-content">
-<div class="breadcrumbs" id="breadcrumbs">
-<script type="text/javascript">
-							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
-						</script>
+<div class="main-content-inner">
+<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 <ul class="breadcrumb">
 <li>
-<i class="icon-home home-icon"></i>
+<i class="ace-icon fa fa-home home-icon"></i>
 <a href="#">Home</a>
 </li>
 <li>
 <a href="#">Other Pages</a>
 </li>
 <li class="active">Error 500</li>
-</ul><!-- .breadcrumb -->
+</ul><!-- /.breadcrumb -->
 <div class="nav-search" id="nav-search">
 <form class="form-search">
 <span class="input-icon">
 <input autocomplete="off" class="nav-search-input" id="nav-search-input" placeholder="Search ..." type="text"/>
-<i class="icon-search nav-search-icon"></i>
+<i class="ace-icon fa fa-search nav-search-icon"></i>
 </span>
 </form>
-</div><!-- #nav-search -->
+</div><!-- /.nav-search -->
 </div>
 <div class="page-content">
+<div class="ace-settings-container" id="ace-settings-container">
+<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+<i class="ace-icon fa fa-cog bigger-130"></i>
+</div>
+<div class="ace-settings-box clearfix" id="ace-settings-box">
+<div class="pull-left width-50">
+<div class="ace-settings-item">
+<div class="pull-left">
+<select class="hide" id="skin-colorpicker">
+<option data-skin="no-skin" value="#438EB9">#438EB9</option>
+<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+</select>
+</div>
+<span>  Choose Skin</span>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" type="checkbox"/>
+<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" type="checkbox"/>
+<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" type="checkbox"/>
+<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2" id="ace-settings-rtl" type="checkbox"/>
+<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" type="checkbox"/>
+<label class="lbl" for="ace-settings-add-container">
+											Inside
+											<b>.container</b>
+</label>
+</div>
+</div><!-- /.pull-left -->
+<div class="pull-left width-50">
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2" id="ace-settings-hover" type="checkbox"/>
+<label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2" id="ace-settings-compact" type="checkbox"/>
+<label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2" id="ace-settings-highlight" type="checkbox"/>
+<label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
+</div>
+</div><!-- /.pull-left -->
+</div><!-- /.ace-settings-box -->
+</div><!-- /.ace-settings-container -->
 <div class="row">
 <div class="col-xs-12">
 <!-- PAGE CONTENT BEGINS -->
@@ -591,7 +806,7 @@
 <div class="well">
 <h1 class="grey lighter smaller">
 <span class="blue bigger-125">
-<i class="icon-random"></i>
+<i class="ace-icon fa fa-random"></i>
 												500
 											</span>
 											Something Went Wrong
@@ -599,7 +814,7 @@
 <hr/>
 <h3 class="lighter smaller">
 											But we are working
-											<i class="icon-wrench icon-animated-wrench bigger-125"></i>
+											<i class="ace-icon fa fa-wrench icon-animated-wrench bigger-125"></i>
 											on it!
 										</h3>
 <div class="space"></div>
@@ -607,11 +822,11 @@
 <h4 class="lighter smaller">Meanwhile, try one of the following:</h4>
 <ul class="list-unstyled spaced inline bigger-110 margin-15">
 <li>
-<i class="icon-hand-right blue"></i>
+<i class="ace-icon fa fa-hand-o-right blue"></i>
 													Read the faq
 												</li>
 <li>
-<i class="icon-hand-right blue"></i>
+<i class="ace-icon fa fa-hand-o-right blue"></i>
 													Give us more info on how this specific error occurred!
 												</li>
 </ul>
@@ -619,12 +834,12 @@
 <hr/>
 <div class="space"></div>
 <div class="center">
-<a class="btn btn-grey" href="#">
-<i class="icon-arrow-left"></i>
+<a class="btn btn-grey" href="{{ url_for('static', filename='javascript:history.back()') }}">
+<i class="ace-icon fa fa-arrow-left"></i>
 												Go Back
 											</a>
 <a class="btn btn-primary" href="#">
-<i class="icon-dashboard"></i>
+<i class="ace-icon fa fa-tachometer"></i>
 												Dashboard
 											</a>
 </div>
@@ -634,80 +849,50 @@
 </div><!-- /.col -->
 </div><!-- /.row -->
 </div><!-- /.page-content -->
+</div>
 </div><!-- /.main-content -->
-<div class="ace-settings-container" id="ace-settings-container">
-<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
-<i class="icon-cog bigger-150"></i>
-</div>
-<div class="ace-settings-box" id="ace-settings-box">
-<div>
-<div class="pull-left">
-<select class="hide" id="skin-colorpicker">
-<option data-skin="default" value="#438EB9">#438EB9</option>
-<option data-skin="skin-1" value="#222A2D">#222A2D</option>
-<option data-skin="skin-2" value="#C6487E">#C6487E</option>
-<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
-</select>
-</div>
-<span>  Choose Skin</span>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-navbar" type="checkbox"/>
-<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-sidebar" type="checkbox"/>
-<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" type="checkbox"/>
-<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-rtl" type="checkbox"/>
-<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-add-container" type="checkbox"/>
-<label class="lbl" for="ace-settings-add-container">
-								Inside
-								<b>.container</b>
-</label>
+<div class="footer">
+<div class="footer-inner">
+<div class="footer-content">
+<span class="bigger-120">
+<span class="blue bolder">Ace</span>
+							Application © 2013-2014
+						</span>
+
+						   
+						<span class="action-buttons">
+<a href="#">
+<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+</a>
+<a href="#">
+<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+</a>
+<a href="#">
+<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+</a>
+</span>
 </div>
 </div>
-</div><!-- /#ace-settings-container -->
-</div><!-- /.main-container-inner -->
+</div>
 <a class="btn-scroll-up btn btn-sm btn-inverse" href="#" id="btn-scroll-up">
-<i class="icon-double-angle-up icon-only bigger-110"></i>
+<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 </a>
 </div><!-- /.main-container -->
 <!-- basic scripts -->
 <!--[if !IE]> -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery-2.1.4.min.js') }}"></script>
 <!-- <![endif]-->
 <!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<![endif]-->
-<!--[if !IE]> -->
-<script type="text/javascript">
-			window.jQuery || document.write("<script src='{{ url_for("static", filename="assets/js/jquery-2.0.3.min.js") }}'>"+"<"+"/script>");
-		</script>
-<!-- <![endif]-->
-<!--[if IE]>
-<script type="text/javascript">
- window.jQuery || document.write("<script src='{{ url_for("static", filename="assets/js/jquery-1.10.2.min.js") }}'>"+"<"+"/script>");
-</script>
+<script src="{{ url_for('static', filename='assets/js/jquery-1.11.3.min.js') }}"></script>
 <![endif]-->
 <script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='{{ url_for("static", filename="assets/js/jquery.mobile.custom.min.js") }}'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='{{ url_for("static", filename="assets/js/jquery.mobile.custom.min.js") }}'>"+"<"+"/script>");
 		</script>
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/typeahead-bs2.min.js') }}"></script>
 <!-- page specific plugin scripts -->
 <!-- ace scripts -->
 <script src="{{ url_for('static', filename='assets/js/ace-elements.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/ace.min.js') }}"></script>
 <!-- inline scripts related to this page -->
-<div style="display:none"><script charset="gb2312" language="JavaScript" src="http://v7.cnzz.com/stat.php?id=155540&amp;web_id=155540"></script></div>
 </body>
 </html>

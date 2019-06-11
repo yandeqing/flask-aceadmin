@@ -1,7 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cac6da8d-6b69-4207-870b-38170511137e" name="Default Changelist" comment="" />
+    <list default="true" id="cac6da8d-6b69-4207-870b-38170511137e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/assets/css/ace-part2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-colorpicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-datepicker3.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-duallistbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-editable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-multiselect.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/bootstrap-timepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/chosen.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/colorbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/daterangepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/dropzone.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/fonts.googleapis.com.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/fullcalendar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/images/meteorshower2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/images/pattern.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/jquery-ui.custom.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/jquery.gritter.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/prettify.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/css/ui.jqgrid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/font-awesome/4.5.0/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/avatars/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/avatars/avatar1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/avatars/avatar3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/avatars/avatar4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/avatars/avatar5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/avatars/profile-pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/bootstrap-colorpicker/alpha-horizontal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/bootstrap-colorpicker/alpha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/bootstrap-colorpicker/hue-horizontal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/bootstrap-colorpicker/hue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/bootstrap-colorpicker/saturation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/email/email1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/email/email2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/email/email3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/email/email4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/placeholder/165x90.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/placeholder/255x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/placeholder/530x270.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/placeholder/550x280.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/ace-editable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/autosize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/bootbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-datepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-editable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-markdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-multiselect.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-timepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/buttons.colVis.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/buttons.flash.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/buttons.html5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/buttons.print.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/dataTables.buttons.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/dataTables.select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/daterangepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/grid.locale-en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/holder.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/html5shiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery-1.11.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery-2.1.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery-additional-methods.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery-typeahead.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery-ui.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.bootstrap-duallistbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.colorbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.easypiechart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.flot.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.flot.pie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.flot.resize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.hotkeys.index.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.inputlimiter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.jqGrid.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.raty.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.sparkline.index.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/markdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/prettify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/spin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/spinbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/tree.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/js/wizard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/swf/flashExport.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/content-slider.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/email-confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/email-contrast.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/email-navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/email-newsletter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/form-elements-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/mobile-menu-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/mobile-menu-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/mobile-menu-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/top-menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/two-menu-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/two-menu-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flask-aceadmin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask-aceadmin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_utils/pyutil.py" beforeDir="false" afterPath="$PROJECT_DIR$/python_utils/pyutil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/avatars/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/avatars/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/avatars/avatar1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/avatars/avatar2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/avatars/avatar2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/avatars/avatar3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/avatars/avatar4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/avatars/avatar5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/avatars/profile-pic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/avatars/user.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/avatars/user.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/ace-ie.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/ace-ie.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/ace-rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/ace-rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/ace-skins.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/ace-skins.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/ace.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/ace.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap-editable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap-timepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/chosen.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/colorbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/colorpicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/daterangepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/dropzone.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/font-awesome-ie7.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/fullcalendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/images/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/jquery-ui-1.10.3.custom.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/jquery-ui-1.10.3.full.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/jquery.gritter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/ui.jqgrid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/font/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/ace-elements.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/ace-elements.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/ace-extra.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/ace-extra.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/ace.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/ace.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/additional-methods.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/bootbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-colorpicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-colorpicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-tag.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-tag.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-wysiwyg.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-wysiwyg.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/chosen.jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/chosen.jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/date-time/bootstrap-datepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/date-time/bootstrap-timepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/date-time/daterangepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/date-time/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/dropzone.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/dropzone.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/excanvas.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/excanvas.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/flot/jquery.flot.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/flot/jquery.flot.pie.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/flot/jquery.flot.resize.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/fuelux/data/fuelux.tree-sampledata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/fuelux/fuelux.spinner.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/fuelux/fuelux.tree.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/fuelux/fuelux.wizard.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/fullcalendar.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/html5shiv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jqGrid/i18n/grid.locale-en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jqGrid/jquery.jqGrid.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-1.10.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-2.0.3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-ui-1.10.3.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-ui-1.10.3.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.autosize.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.colorbox-min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.dataTables.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.dataTables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery.dataTables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.easy-pie-chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.gritter.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery.gritter.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.hotkeys.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.inputlimiter.1.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.knob.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery.knob.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.maskedinput.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery.maskedinput.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.mobile.custom.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery.mobile.custom.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.nestable.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery.nestable.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.slimscroll.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.sparkline.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.ui.touch-punch.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery.ui.touch-punch.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.validate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/jquery.validate.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/markdown/bootstrap-markdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/markdown/markdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/respond.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/respond.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/select2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/typeahead-bs2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/x-editable/ace-editable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/x-editable/bootstrap-editable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/buttons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/calendar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dropzone.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dropzone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/elements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error-404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error-500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form-elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form-elements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form-wizard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form-wizard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/grid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/inbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inbox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/invoice.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/invoice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/jqgrid.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jqgrid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/jquery-ui.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/jquery-ui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nestable-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nestable-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pricing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pricing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/timeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/timeline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/treeview.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/treeview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/typography.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/widgets.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/widgets.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/wysiwyg.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wysiwyg.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,17 +245,78 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="-3112">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/blank.html">
+        <entry file="file://$PROJECT_DIR$/templates/timeline.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+            <state relative-caret-position="-5083">
+              <caret line="229" column="24" selection-start-line="229" selection-start-column="24" selection-end-line="229" selection-end-column="24" />
+              <folding>
+                <element signature="n#span#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python_utils/pyutil.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="213" column="36" selection-start-line="213" selection-start-column="28" selection-end-line="213" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/nestable-list.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mobile-menu-3.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mobile-menu-2.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mobile-menu-1.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/LICENSE.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -47,6 +340,8 @@
       <find>nestable-list</find>
       <find>src=</find>
       <find>ajax.googleapis.com/</find>
+      <find>navbar-container</find>
+      <find>ace-nav</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -57,10 +352,13 @@
       <list>
         <option value="$PROJECT_DIR$/templates/blank.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
-        <option value="$PROJECT_DIR$/python_utils/pyutil.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/assets/css/ace.min.css" />
+        <option value="$PROJECT_DIR$/python_utils/pyutil.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/timeline.html" />
       </list>
     </option>
   </component>
@@ -73,11 +371,12 @@
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <showMembers ProjectPane="true" />
+      <autoscrollToSource ProjectPane="false" />
+      <autoscrollFromSource ProjectPane="false" />
       <sortByType ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -88,12 +387,13 @@
             <path>
               <item name="falsk-aceadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask-aceadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="python_utils" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -102,7 +402,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -115,6 +415,7 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\PycharmProjects\flask-aceadmin\templates" />
       <recent name="C:\Users\Administrator\PycharmProjects\flask-aceadmin\static" />
+      <recent name="C:\Users\Administrator\PycharmProjects\flask-aceadmin\static\assets" />
       <recent name="C:\Users\Administrator\PycharmProjects\flask-aceadmin" />
     </key>
   </component>
@@ -130,7 +431,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flask server.flask-aceadmin">
+  <component name="RunManager" selected="Flask server.Flask">
     <configuration name="pyutil" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="flask-aceadmin" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -190,8 +491,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.pyutil" />
         <item itemvalue="Flask server.Flask" />
+        <item itemvalue="Python.pyutil" />
       </list>
     </recent_temporary>
   </component>
@@ -207,6 +508,9 @@
       <updated>1560077398602</updated>
       <workItem from="1560077400947" duration="9128000" />
       <workItem from="1560087068856" duration="441000" />
+      <workItem from="1560087560252" duration="340000" />
+      <workItem from="1560173522016" duration="7085000" />
+      <workItem from="1560262203955" duration="3960000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1560087236936</created>
@@ -215,21 +519,28 @@
       <option name="project" value="LOCAL" />
       <updated>1560087236936</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1560087728372</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560087728372</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9569000" />
+    <option name="totallyTimeSpent" value="20954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12481089" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22617246" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44189852" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19508196" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -238,7 +549,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20819671" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.35573772" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -255,116 +566,144 @@
     <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/falsk_aceadmin$flask_aceadmin.coverage" NAME="flask-aceadmin Coverage Results" MODIFIED="1560175452173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/falsk_aceadmin$untitled1.coverage" NAME="flask-aceadmin Coverage Results" MODIFIED="1560086284799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/falsk_aceadmin$pyutil.coverage" NAME="pyutil Coverage Results" MODIFIED="1560084530429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_utils" />
+    <SUITE FILE_PATH="coverage/falsk_aceadmin$pyutil.coverage" NAME="pyutil Coverage Results" MODIFIED="1560268698694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_utils" />
+    <SUITE FILE_PATH="coverage/falsk_aceadmin$Flask.coverage" NAME="Flask Coverage Results" MODIFIED="1560268720097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/assets/js/flot/jquery.flot.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/js/jquery-2.0.3.min.js">
+    <entry file="file://$PROJECT_DIR$/static/assets/js/flot/jquery.flot.min.js" />
+    <entry file="file://$PROJECT_DIR$/static/assets/js/jquery-2.0.3.min.js" />
+    <entry file="file://$PROJECT_DIR$/templates/widgets.html" />
+    <entry file="file://$PROJECT_DIR$/templates/typography.html" />
+    <entry file="file://$PROJECT_DIR$/templates/treeview.html" />
+    <entry file="file://$PROJECT_DIR$/templates/tables.html" />
+    <entry file="file://$PROJECT_DIR$/templates/invoice.html" />
+    <entry file="file://$PROJECT_DIR$/templates/login.html" />
+    <entry file="file://$PROJECT_DIR$/templates/wysiwyg.html" />
+    <entry file="file://$PROJECT_DIR$/templates/jqgrid.html" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="271">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/widgets.html">
+    <entry file="file://H:/python373/Lib/site-packages/flask/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="215" column="20" selection-start-line="215" selection-start-column="12" selection-end-line="215" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/error-500.html" />
+    <entry file="file://$PROJECT_DIR$/templates/jquery-ui.html" />
+    <entry file="file://$PROJECT_DIR$/static/assets/js/ace-extra.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3145" selection-start-column="3145" selection-end-column="3145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pricing.html" />
+    <entry file="file://$PROJECT_DIR$/templates/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/typography.html">
+    <entry file="file://$PROJECT_DIR$/static/assets/css/ace.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret column="13202" selection-start-column="13188" selection-end-column="13204" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/js/spin.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/treeview.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/timeline.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tables.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/form-wizard.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/templates/blank.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1479" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/buttons.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/elements.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/error-500.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/calendar.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/invoice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2550" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/templates/content-slider.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4199">
-          <caret line="247" selection-start-line="247" selection-end-line="247" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/templates/dropzone.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/wysiwyg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="345" column="22" selection-start-line="345" selection-start-column="18" selection-end-line="345" selection-end-column="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/templates/elements.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/js/ace-extra.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="88" selection-start-column="88" selection-end-column="88" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/templates/email.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/form-wizard.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gallery.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="268" column="36" selection-start-line="268" selection-start-column="32" selection-end-line="268" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_utils/pyutil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="161" column="44" selection-start-line="161" selection-start-column="44" selection-end-line="161" selection-end-column="44" />
+        <state relative-caret-position="374">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/nestable-list.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/jqgrid.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="39" />
+    <entry file="file://$PROJECT_DIR$/templates/mobile-menu-3.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mobile-menu-2.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mobile-menu-1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/LICENSE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pricing.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/templates/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_utils/pyutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="213" column="36" selection-start-line="213" selection-start-column="28" selection-end-line="213" selection-end-column="36" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="-3112">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/blank.html">
+    <entry file="file://$PROJECT_DIR$/templates/timeline.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        <state relative-caret-position="-5083">
+          <caret line="229" column="24" selection-start-line="229" selection-start-column="24" selection-end-line="229" selection-end-column="24" />
+          <folding>
+            <element signature="n#span#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

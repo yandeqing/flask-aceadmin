@@ -1,40 +1,41 @@
 <html lang="en">
 <head>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
 <meta charset="utf-8"/>
-<title>UI组件 - Bootstrap后台管理系统模版Ace下载</title>
-<meta content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" name="keywords"/>
-<meta content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" name="description"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- basic styles -->
+<title>UI Elements - Ace Admin</title>
+<meta content="Common UI Features &amp; Elements" name="description"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+<!-- bootstrap & fontawesome -->
 <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet"/>
-<link href="{{ url_for('static', filename='assets/css/font-awesome.min.css') }}" rel="stylesheet"/>
-<!--[if IE 7]>
-		  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/font-awesome-ie7.min.css') }}" />
-		<![endif]-->
+<link href="{{ url_for('static', filename='assets/font-awesome/4.5.0/css/font-awesome.min.css') }}" rel="stylesheet"/>
 <!-- page specific plugin styles -->
-<link href="{{ url_for('static', filename='assets/css/jquery-ui-1.10.3.custom.min.css') }}" rel="stylesheet"/>
-<link href="{{ url_for('static', filename='assets/css/jquery.gritter.css') }}" rel="stylesheet"/>
-<!-- fonts -->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet"/>
+<link href="{{ url_for('static', filename='assets/css/jquery-ui.custom.min.css') }}" rel="stylesheet"/>
+<link href="{{ url_for('static', filename='assets/css/jquery.gritter.min.css') }}" rel="stylesheet"/>
+<!-- text fonts -->
+<link href="{{ url_for('static', filename='assets/css/fonts.googleapis.com.css') }}" rel="stylesheet"/>
 <!-- ace styles -->
-<link href="{{ url_for('static', filename='assets/css/ace.min.css') }}" rel="stylesheet"/>
-<link href="{{ url_for('static', filename='assets/css/ace-rtl.min.css') }}" rel="stylesheet"/>
+<link class="ace-main-stylesheet" href="{{ url_for('static', filename='assets/css/ace.min.css') }}" id="main-ace-style" rel="stylesheet"/>
+<!--[if lte IE 9]>
+			<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ace-part2.min.css') }}" class="ace-main-stylesheet" />
+		<![endif]-->
 <link href="{{ url_for('static', filename='assets/css/ace-skins.min.css') }}" rel="stylesheet"/>
-<!--[if lte IE 8]>
+<link href="{{ url_for('static', filename='assets/css/ace-rtl.min.css') }}" rel="stylesheet"/>
+<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/ace-ie.min.css') }}" />
 		<![endif]-->
 <!-- inline styles related to this page -->
 <style>
+			/* some elements used in demo only */
 			.spinner-preview {
-				width:100px;
-				height:100px;
-				text-align:center;
-				margin-top:60px;
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				margin-top: 60px;
 			}
 			
 			.dropdown-preview {
-				margin:0 5px;
-				display:inline-block;
+				margin: 0 5px;
+				display: inline-block;
 			}
 			.dropdown-preview  > .dropdown-menu {
 				display: block;
@@ -44,38 +45,43 @@
 		</style>
 <!-- ace settings handler -->
 <script src="{{ url_for('static', filename='assets/js/ace-extra.min.js') }}"></script>
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-		<script src="{{ url_for('static', filename='assets/js/html5shiv.js') }}"></script>
+<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+<!--[if lte IE 8]>
+		<script src="{{ url_for('static', filename='assets/js/html5shiv.min.js') }}"></script>
 		<script src="{{ url_for('static', filename='assets/js/respond.min.js') }}"></script>
 		<![endif]-->
 </head>
-<body>
-<div class="navbar navbar-default" id="navbar">
-<script type="text/javascript">
-				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
-			</script>
-<div class="navbar-container" id="navbar-container">
+<body class="no-skin">
+<div class="navbar navbar-default ace-save-state" id="navbar">
+<div class="navbar-container ace-save-state" id="navbar-container">
+<button class="navbar-toggle menu-toggler pull-left" data-target="#sidebar" id="menu-toggler" type="button">
+<span class="sr-only">Toggle sidebar</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
 <div class="navbar-header pull-left">
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="index">
 <small>
-<i class="icon-leaf"></i>
+<i class="fa fa-leaf"></i>
 							Ace Admin
 						</small>
-</a><!-- /.brand -->
-</div><!-- /.navbar-header -->
-<div class="navbar-header pull-right" role="navigation">
+</a>
+</div>
+<div class="navbar-buttons navbar-header pull-right" role="navigation">
 <ul class="nav ace-nav">
-<li class="grey">
+<li class="grey dropdown-modal">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-<i class="icon-tasks"></i>
+<i class="ace-icon fa fa-tasks"></i>
 <span class="badge badge-grey">4</span>
 </a>
-<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
 <li class="dropdown-header">
-<i class="icon-ok"></i>
+<i class="ace-icon fa fa-check"></i>
 									4 Tasks to complete
 								</li>
+<li class="dropdown-content">
+<ul class="dropdown-menu dropdown-navbar">
 <li>
 <a href="#">
 <div class="clearfix">
@@ -120,48 +126,52 @@
 </div>
 </a>
 </li>
-<li>
+</ul>
+</li>
+<li class="dropdown-footer">
 <a href="#">
 										See tasks with details
-										<i class="icon-arrow-right"></i>
+										<i class="ace-icon fa fa-arrow-right"></i>
 </a>
 </li>
 </ul>
 </li>
-<li class="purple">
+<li class="purple dropdown-modal">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-<i class="icon-bell-alt icon-animated-bell"></i>
+<i class="ace-icon fa fa-bell icon-animated-bell"></i>
 <span class="badge badge-important">8</span>
 </a>
-<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
 <li class="dropdown-header">
-<i class="icon-warning-sign"></i>
+<i class="ace-icon fa fa-exclamation-triangle"></i>
 									8 Notifications
 								</li>
+<li class="dropdown-content">
+<ul class="dropdown-menu dropdown-navbar navbar-pink">
 <li>
 <a href="#">
 <div class="clearfix">
 <span class="pull-left">
-<i class="btn btn-xs no-hover btn-pink icon-comment"></i>
-												New Comments
-											</span>
+<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+														New Comments
+													</span>
 <span class="pull-right badge badge-info">+12</span>
 </div>
 </a>
 </li>
 <li>
 <a href="#">
-<i class="btn btn-xs btn-primary icon-user"></i>
-										Bob just signed up as an editor ...
-									</a>
+<i class="btn btn-xs btn-primary fa fa-user"></i>
+												Bob just signed up as an editor ...
+											</a>
 </li>
 <li>
 <a href="#">
 <div class="clearfix">
 <span class="pull-left">
-<i class="btn btn-xs no-hover btn-success icon-shopping-cart"></i>
-												New Orders
-											</span>
+<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+														New Orders
+													</span>
 <span class="pull-right badge badge-success">+8</span>
 </div>
 </a>
@@ -170,144 +180,176 @@
 <a href="#">
 <div class="clearfix">
 <span class="pull-left">
-<i class="btn btn-xs no-hover btn-info icon-twitter"></i>
-												Followers
-											</span>
+<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+														Followers
+													</span>
 <span class="pull-right badge badge-info">+11</span>
 </div>
 </a>
 </li>
-<li>
+</ul>
+</li>
+<li class="dropdown-footer">
 <a href="#">
 										See all notifications
-										<i class="icon-arrow-right"></i>
+										<i class="ace-icon fa fa-arrow-right"></i>
 </a>
 </li>
 </ul>
 </li>
-<li class="green">
+<li class="green dropdown-modal">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-<i class="icon-envelope icon-animated-vertical"></i>
+<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
 <span class="badge badge-success">5</span>
 </a>
-<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
 <li class="dropdown-header">
-<i class="icon-envelope-alt"></i>
+<i class="ace-icon fa fa-envelope-o"></i>
 									5 Messages
 								</li>
+<li class="dropdown-content">
+<ul class="dropdown-menu dropdown-navbar">
 <li>
-<a href="#">
-<img alt="Alex's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/avatars/avatar.png') }}"/>
+<a class="clearfix" href="#">
+<img alt="Alex's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar.png') }}"/>
 <span class="msg-body">
 <span class="msg-title">
 <span class="blue">Alex:</span>
-												Ciao sociis natoque penatibus et auctor ...
-											</span>
+														Ciao sociis natoque penatibus et auctor ...
+													</span>
 <span class="msg-time">
-<i class="icon-time"></i>
+<i class="ace-icon fa fa-clock-o"></i>
 <span>a moment ago</span>
 </span>
 </span>
 </a>
 </li>
 <li>
-<a href="#">
-<img alt="Susan's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/avatars/avatar3.png') }}"/>
+<a class="clearfix" href="#">
+<img alt="Susan's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar3.png') }}"/>
 <span class="msg-body">
 <span class="msg-title">
 <span class="blue">Susan:</span>
-												Vestibulum id ligula porta felis euismod ...
-											</span>
+														Vestibulum id ligula porta felis euismod ...
+													</span>
 <span class="msg-time">
-<i class="icon-time"></i>
+<i class="ace-icon fa fa-clock-o"></i>
 <span>20 minutes ago</span>
 </span>
 </span>
 </a>
 </li>
 <li>
-<a href="#">
-<img alt="Bob's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/avatars/avatar4.png') }}"/>
+<a class="clearfix" href="#">
+<img alt="Bob's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar4.png') }}"/>
 <span class="msg-body">
 <span class="msg-title">
 <span class="blue">Bob:</span>
-												Nullam quis risus eget urna mollis ornare ...
-											</span>
+														Nullam quis risus eget urna mollis ornare ...
+													</span>
 <span class="msg-time">
-<i class="icon-time"></i>
+<i class="ace-icon fa fa-clock-o"></i>
 <span>3:15 pm</span>
 </span>
 </span>
 </a>
 </li>
 <li>
-<a href="inbox">
-										See all messages
-										<i class="icon-arrow-right"></i>
+<a class="clearfix" href="#">
+<img alt="Kate's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar2.png') }}"/>
+<span class="msg-body">
+<span class="msg-title">
+<span class="blue">Kate:</span>
+														Ciao sociis natoque eget urna mollis ornare ...
+													</span>
+<span class="msg-time">
+<i class="ace-icon fa fa-clock-o"></i>
+<span>1:33 pm</span>
+</span>
+</span>
+</a>
+</li>
+<li>
+<a class="clearfix" href="#">
+<img alt="Fred's Avatar" class="msg-photo" src="{{ url_for('static', filename='assets/images/avatars/avatar5.png') }}"/>
+<span class="msg-body">
+<span class="msg-title">
+<span class="blue">Fred:</span>
+														Vestibulum id penatibus et auctor  ...
+													</span>
+<span class="msg-time">
+<i class="ace-icon fa fa-clock-o"></i>
+<span>10:09 am</span>
+</span>
+</span>
 </a>
 </li>
 </ul>
 </li>
-<li class="light-blue">
+<li class="dropdown-footer">
+<a href="inbox">
+										See all messages
+										<i class="ace-icon fa fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</li>
+<li class="light-blue dropdown-modal">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-<img alt="Jason's Photo" class="nav-user-photo" src="{{ url_for('static', filename='assets/avatars/user.jpg') }}"/>
+<img alt="Jason's Photo" class="nav-user-photo" src="{{ url_for('static', filename='assets/images/avatars/user.jpg') }}"/>
 <span class="user-info">
 <small>Welcome,</small>
 									Jason
 								</span>
-<i class="icon-caret-down"></i>
+<i class="ace-icon fa fa-caret-down"></i>
 </a>
-<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 <li>
 <a href="#">
-<i class="icon-cog"></i>
+<i class="ace-icon fa fa-cog"></i>
 										Settings
 									</a>
 </li>
 <li>
-<a href="#">
-<i class="icon-user"></i>
+<a href="profile">
+<i class="ace-icon fa fa-user"></i>
 										Profile
 									</a>
 </li>
 <li class="divider"></li>
 <li>
 <a href="#">
-<i class="icon-off"></i>
+<i class="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>
 </li>
 </ul>
 </li>
-</ul><!-- /.ace-nav -->
-</div><!-- /.navbar-header -->
-</div><!-- /.container -->
+</ul>
 </div>
-<div class="main-container" id="main-container">
+</div><!-- /.navbar-container -->
+</div>
+<div class="main-container ace-save-state" id="main-container">
 <script type="text/javascript">
-				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+				try{ace.settings.loadState('main-container')}catch(e){}
 			</script>
-<div class="main-container-inner">
-<a class="menu-toggler" href="#" id="menu-toggler">
-<span class="menu-text"></span>
-</a>
-<div class="sidebar" id="sidebar">
+<div class="sidebar responsive ace-save-state" id="sidebar">
 <script type="text/javascript">
-						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
-					</script>
+					try{ace.settings.loadState('sidebar')}catch(e){}
+				</script>
 <div class="sidebar-shortcuts" id="sidebar-shortcuts">
 <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
 <button class="btn btn-success">
-<i class="icon-signal"></i>
+<i class="ace-icon fa fa-signal"></i>
 </button>
 <button class="btn btn-info">
-<i class="icon-pencil"></i>
+<i class="ace-icon fa fa-pencil"></i>
 </button>
 <button class="btn btn-warning">
-<i class="icon-group"></i>
+<i class="ace-icon fa fa-users"></i>
 </button>
 <button class="btn btn-danger">
-<i class="icon-cogs"></i>
+<i class="ace-icon fa fa-cogs"></i>
 </button>
 </div>
 <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
@@ -316,90 +358,165 @@
 <span class="btn btn-warning"></span>
 <span class="btn btn-danger"></span>
 </div>
-</div><!-- #sidebar-shortcuts -->
+</div><!-- /.sidebar-shortcuts -->
 <ul class="nav nav-list">
-<li>
+<li class="">
 <a href="index">
-<i class="icon-dashboard"></i>
-<span class="menu-text"> 控制台 </span>
+<i class="menu-icon fa fa-tachometer"></i>
+<span class="menu-text"> Dashboard </span>
 </a>
-</li>
-<li>
-<a href="typography">
-<i class="icon-text-width"></i>
-<span class="menu-text"> 文字排版 </span>
-</a>
+<b class="arrow"></b>
 </li>
 <li class="active open">
 <a class="dropdown-toggle" href="#">
-<i class="icon-desktop"></i>
-<span class="menu-text"> UI 组件 </span>
-<b class="arrow icon-angle-down"></b>
+<i class="menu-icon fa fa-desktop"></i>
+<span class="menu-text">
+								UI &amp; Elements
+							</span>
+<b class="arrow fa fa-angle-down"></b>
 </a>
+<b class="arrow"></b>
 <ul class="submenu">
+<li class="">
+<a class="dropdown-toggle" href="#">
+<i class="menu-icon fa fa-caret-right"></i>
+
+									Layouts
+									<b class="arrow fa fa-angle-down"></b>
+</a>
+<b class="arrow"></b>
+<ul class="submenu">
+<li class="">
+<a href="top-menu">
+<i class="menu-icon fa fa-caret-right"></i>
+											Top Menu
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="two-menu-1">
+<i class="menu-icon fa fa-caret-right"></i>
+											Two Menus 1
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="two-menu-2">
+<i class="menu-icon fa fa-caret-right"></i>
+											Two Menus 2
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="mobile-menu-1">
+<i class="menu-icon fa fa-caret-right"></i>
+											Default Mobile Menu
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="mobile-menu-2">
+<i class="menu-icon fa fa-caret-right"></i>
+											Mobile Menu 2
+										</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="mobile-menu-3">
+<i class="menu-icon fa fa-caret-right"></i>
+											Mobile Menu 3
+										</a>
+<b class="arrow"></b>
+</li>
+</ul>
+</li>
+<li class="">
+<a href="typography">
+<i class="menu-icon fa fa-caret-right"></i>
+									Typography
+								</a>
+<b class="arrow"></b>
+</li>
 <li class="active">
 <a href="elements">
-<i class="icon-double-angle-right"></i>
-										组件
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Elements
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="buttons">
-<i class="icon-double-angle-right"></i>
-										按钮 &amp; 图表
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Buttons &amp; Icons
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
+<a href="content-slider">
+<i class="menu-icon fa fa-caret-right"></i>
+									Content Sliders
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
 <a href="treeview">
-<i class="icon-double-angle-right"></i>
-										树菜单
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Treeview
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="jquery-ui">
-<i class="icon-double-angle-right"></i>
-										jQuery UI
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									jQuery UI
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="nestable-list">
-<i class="icon-double-angle-right"></i>
-										可拖拽列表
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Nestable Lists
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a class="dropdown-toggle" href="#">
-<i class="icon-double-angle-right"></i>
+<i class="menu-icon fa fa-caret-right"></i>
 
-										三级菜单
-										<b class="arrow icon-angle-down"></b>
+									Three Level Menu
+									<b class="arrow fa fa-angle-down"></b>
 </a>
+<b class="arrow"></b>
 <ul class="submenu">
-<li>
+<li class="">
 <a href="#">
-<i class="icon-leaf"></i>
-												第一级
-											</a>
+<i class="menu-icon fa fa-leaf green"></i>
+											Item #1
+										</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a class="dropdown-toggle" href="#">
-<i class="icon-pencil"></i>
+<i class="menu-icon fa fa-pencil orange"></i>
 
-												第四级
-												<b class="arrow icon-angle-down"></b>
+											4th level
+											<b class="arrow fa fa-angle-down"></b>
 </a>
+<b class="arrow"></b>
 <ul class="submenu">
-<li>
+<li class="">
 <a href="#">
-<i class="icon-plus"></i>
-														添加产品
-													</a>
+<i class="menu-icon fa fa-plus purple"></i>
+													Add Product
+												</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="#">
-<i class="icon-eye-open"></i>
-														查看商品
-													</a>
+<i class="menu-icon fa fa-eye pink"></i>
+													View Products
+												</a>
+<b class="arrow"></b>
 </li>
 </ul>
 </li>
@@ -407,208 +524,307 @@
 </li>
 </ul>
 </li>
-<li>
+<li class="">
 <a class="dropdown-toggle" href="#">
-<i class="icon-list"></i>
-<span class="menu-text"> 表格 </span>
-<b class="arrow icon-angle-down"></b>
+<i class="menu-icon fa fa-list"></i>
+<span class="menu-text"> Tables </span>
+<b class="arrow fa fa-angle-down"></b>
 </a>
+<b class="arrow"></b>
 <ul class="submenu">
-<li>
+<li class="">
 <a href="tables">
-<i class="icon-double-angle-right"></i>
-										简单 &amp; 动态
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Simple &amp; Dynamic
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="jqgrid">
-<i class="icon-double-angle-right"></i>
-										jqGrid plugin
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									jqGrid plugin
+								</a>
+<b class="arrow"></b>
 </li>
 </ul>
 </li>
-<li>
+<li class="">
 <a class="dropdown-toggle" href="#">
-<i class="icon-edit"></i>
-<span class="menu-text"> 表单 </span>
-<b class="arrow icon-angle-down"></b>
+<i class="menu-icon fa fa-pencil-square-o"></i>
+<span class="menu-text"> Forms </span>
+<b class="arrow fa fa-angle-down"></b>
 </a>
+<b class="arrow"></b>
 <ul class="submenu">
-<li>
+<li class="">
 <a href="form-elements">
-<i class="icon-double-angle-right"></i>
-										表单组件
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Form Elements
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
+<a href="form-elements-2">
+<i class="menu-icon fa fa-caret-right"></i>
+									Form Elements 2
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
 <a href="form-wizard">
-<i class="icon-double-angle-right"></i>
-										向导提示 &amp; 验证
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Wizard &amp; Validation
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="wysiwyg">
-<i class="icon-double-angle-right"></i>
-										编辑器
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Wysiwyg &amp; Markdown
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="dropzone">
-<i class="icon-double-angle-right"></i>
-										文件上传
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Dropzone File Upload
+								</a>
+<b class="arrow"></b>
 </li>
 </ul>
 </li>
-<li>
+<li class="">
 <a href="widgets">
-<i class="icon-list-alt"></i>
-<span class="menu-text"> 插件 </span>
+<i class="menu-icon fa fa-list-alt"></i>
+<span class="menu-text"> Widgets </span>
 </a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="calendar">
-<i class="icon-calendar"></i>
+<i class="menu-icon fa fa-calendar"></i>
 <span class="menu-text">
-									日历
-									<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-<i class="icon-warning-sign red bigger-130"></i>
+								Calendar
+
+								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
 </span>
 </span>
 </a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="gallery">
-<i class="icon-picture"></i>
-<span class="menu-text"> 相册 </span>
+<i class="menu-icon fa fa-picture-o"></i>
+<span class="menu-text"> Gallery </span>
 </a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a class="dropdown-toggle" href="#">
-<i class="icon-tag"></i>
-<span class="menu-text"> 更多页面 </span>
-<b class="arrow icon-angle-down"></b>
+<i class="menu-icon fa fa-tag"></i>
+<span class="menu-text"> More Pages </span>
+<b class="arrow fa fa-angle-down"></b>
 </a>
+<b class="arrow"></b>
 <ul class="submenu">
-<li>
+<li class="">
 <a href="profile">
-<i class="icon-double-angle-right"></i>
-										用户信息
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									User Profile
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="inbox">
-<i class="icon-double-angle-right"></i>
-										收件箱
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Inbox
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="pricing">
-<i class="icon-double-angle-right"></i>
-										售价单
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Pricing Tables
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="invoice">
-<i class="icon-double-angle-right"></i>
-										购物车
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Invoice
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="timeline">
-<i class="icon-double-angle-right"></i>
-										时间轴
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Timeline
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
+<a href="search">
+<i class="menu-icon fa fa-caret-right"></i>
+									Search Results
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
+<a href="email">
+<i class="menu-icon fa fa-caret-right"></i>
+									Email Templates
+								</a>
+<b class="arrow"></b>
+</li>
+<li class="">
 <a href="login">
-<i class="icon-double-angle-right"></i>
-										登录 &amp; 注册
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Login &amp; Register
+								</a>
+<b class="arrow"></b>
 </li>
 </ul>
 </li>
-<li>
+<li class="">
 <a class="dropdown-toggle" href="#">
-<i class="icon-file-alt"></i>
+<i class="menu-icon fa fa-file-o"></i>
 <span class="menu-text">
-									其他页面
-									<span class="badge badge-primary">5</span>
+								Other Pages
+
+								<span class="badge badge-primary">5</span>
 </span>
-<b class="arrow icon-angle-down"></b>
+<b class="arrow fa fa-angle-down"></b>
 </a>
+<b class="arrow"></b>
 <ul class="submenu">
-<li>
+<li class="">
 <a href="faq">
-<i class="icon-double-angle-right"></i>
-										帮助
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									FAQ
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="error-404">
-<i class="icon-double-angle-right"></i>
-										404错误页面
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Error 404
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="error-500">
-<i class="icon-double-angle-right"></i>
-										500错误页面
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Error 500
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="grid">
-<i class="icon-double-angle-right"></i>
-										网格
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Grid
+								</a>
+<b class="arrow"></b>
 </li>
-<li>
+<li class="">
 <a href="blank">
-<i class="icon-double-angle-right"></i>
-										空白页面
-									</a>
+<i class="menu-icon fa fa-caret-right"></i>
+									Blank Page
+								</a>
+<b class="arrow"></b>
 </li>
 </ul>
 </li>
 </ul><!-- /.nav-list -->
-<div class="sidebar-collapse" id="sidebar-collapse">
-<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+<i class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right" id="sidebar-toggle-icon"></i>
 </div>
-<script type="text/javascript">
-						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
-					</script>
 </div>
 <div class="main-content">
-<div class="breadcrumbs" id="breadcrumbs">
-<script type="text/javascript">
-							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
-						</script>
+<div class="main-content-inner">
+<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 <ul class="breadcrumb">
 <li>
-<i class="icon-home home-icon"></i>
+<i class="ace-icon fa fa-home home-icon"></i>
 <a href="#">Home</a>
 </li>
 <li>
-<a href="#">UI Elements</a>
+<a href="#">UI &amp; Elements</a>
 </li>
 <li class="active">Elements</li>
-</ul><!-- .breadcrumb -->
+</ul><!-- /.breadcrumb -->
 <div class="nav-search" id="nav-search">
 <form class="form-search">
 <span class="input-icon">
 <input autocomplete="off" class="nav-search-input" id="nav-search-input" placeholder="Search ..." type="text"/>
-<i class="icon-search nav-search-icon"></i>
+<i class="ace-icon fa fa-search nav-search-icon"></i>
 </span>
 </form>
-</div><!-- #nav-search -->
+</div><!-- /.nav-search -->
 </div>
 <div class="page-content">
+<div class="ace-settings-container" id="ace-settings-container">
+<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+<i class="ace-icon fa fa-cog bigger-130"></i>
+</div>
+<div class="ace-settings-box clearfix" id="ace-settings-box">
+<div class="pull-left width-50">
+<div class="ace-settings-item">
+<div class="pull-left">
+<select class="hide" id="skin-colorpicker">
+<option data-skin="no-skin" value="#438EB9">#438EB9</option>
+<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+</select>
+</div>
+<span>  Choose Skin</span>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" type="checkbox"/>
+<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" type="checkbox"/>
+<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" type="checkbox"/>
+<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2" id="ace-settings-rtl" type="checkbox"/>
+<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" type="checkbox"/>
+<label class="lbl" for="ace-settings-add-container">
+											Inside
+											<b>.container</b>
+</label>
+</div>
+</div><!-- /.pull-left -->
+<div class="pull-left width-50">
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2" id="ace-settings-hover" type="checkbox"/>
+<label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2" id="ace-settings-compact" type="checkbox"/>
+<label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
+</div>
+<div class="ace-settings-item">
+<input autocomplete="off" class="ace ace-checkbox-2" id="ace-settings-highlight" type="checkbox"/>
+<label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
+</div>
+</div><!-- /.pull-left -->
+</div><!-- /.ace-settings-box -->
+</div><!-- /.ace-settings-container -->
 <div class="page-header">
 <h1>
 								UI Elements
 								<small>
-<i class="icon-double-angle-right"></i>
+<i class="ace-icon fa fa-angle-double-right"></i>
 									Common UI Features &amp; Elements
 								</small>
 </h1>
@@ -621,13 +837,13 @@
 <div class="tabbable">
 <ul class="nav nav-tabs" id="myTab">
 <li class="active">
-<a data-toggle="tab" href="{{ url_for('static', filename='#home') }}">
-<i class="green icon-home bigger-110"></i>
+<a data-toggle="tab" href="#home">
+<i class="green ace-icon fa fa-home bigger-120"></i>
 														Home
 													</a>
 </li>
 <li>
-<a data-toggle="tab" href="{{ url_for('static', filename='#profile') }}">
+<a data-toggle="tab" href="#messages">
 														Messages
 														<span class="badge badge-danger">4</span>
 </a>
@@ -635,35 +851,35 @@
 <li class="dropdown">
 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
 														Dropdown  
-														<i class="icon-caret-down bigger-110 width-auto"></i>
+														<i class="ace-icon fa fa-caret-down bigger-110 width-auto"></i>
 </a>
 <ul class="dropdown-menu dropdown-info">
 <li>
-<a data-toggle="tab" href="{{ url_for('static', filename='#dropdown1') }}">@fat</a>
+<a data-toggle="tab" href="#dropdown1">@fat</a>
 </li>
 <li>
-<a data-toggle="tab" href="{{ url_for('static', filename='#dropdown2') }}">@mdo</a>
+<a data-toggle="tab" href="#dropdown2">@mdo</a>
 </li>
 </ul>
 </li>
 </ul>
 <div class="tab-content">
-<div class="tab-pane in active" id="home">
+<div class="tab-pane fade in active" id="home">
 <p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
 </div>
-<div class="tab-pane" id="profile">
+<div class="tab-pane fade" id="messages">
 <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
 </div>
-<div class="tab-pane" id="dropdown1">
+<div class="tab-pane fade" id="dropdown1">
 <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
 </div>
-<div class="tab-pane" id="dropdown2">
+<div class="tab-pane fade" id="dropdown2">
 <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.</p>
 </div>
 </div>
 </div>
-</div><!-- /span -->
-<div class="vspace-xs-6"></div>
+</div><!-- /.col -->
+<div class="vspace-6-sm"></div>
 <div class="col-sm-6">
 <div class="tabbable tabs-below">
 <div class="tab-content">
@@ -679,38 +895,38 @@
 </div>
 <ul class="nav nav-tabs" id="myTab2">
 <li class="active">
-<a data-toggle="tab" href="{{ url_for('static', filename='#home') }}2">Home</a>
+<a data-toggle="tab" href="#home2">Home</a>
 </li>
 <li>
-<a data-toggle="tab" href="{{ url_for('static', filename='#profile') }}2">Profile</a>
+<a data-toggle="tab" href="#profile2">Profile</a>
 </li>
 <li>
-<a data-toggle="tab" href="{{ url_for('static', filename='{{ url_for('static', filename='#dropdown1') }}2') }}">More</a>
+<a data-toggle="tab" href="#dropdown12">More</a>
 </li>
 </ul>
 </div>
 </div>
-</div><!-- /row -->
+</div><!-- /.row -->
 <div class="space"></div>
 <div class="row">
 <div class="col-sm-6">
 <div class="tabbable tabs-left">
 <ul class="nav nav-tabs" id="myTab3">
 <li class="active">
-<a data-toggle="tab" href="{{ url_for('static', filename='#home') }}3">
-<i class="pink icon-dashboard bigger-110"></i>
+<a data-toggle="tab" href="#home3">
+<i class="pink ace-icon fa fa-tachometer bigger-110"></i>
 														Home
 													</a>
 </li>
 <li>
-<a data-toggle="tab" href="{{ url_for('static', filename='{{ url_for('static', filename='#profile') }}3') }}">
-<i class="blue icon-user bigger-110"></i>
+<a data-toggle="tab" href="#profile3">
+<i class="blue ace-icon fa fa-user bigger-110"></i>
 														Profile
 													</a>
 </li>
 <li>
-<a data-toggle="tab" href="{{ url_for('static', filename='{{ url_for('static', filename='#dropdown1') }}3') }}">
-<i class="icon-rocket"></i>
+<a data-toggle="tab" href="#dropdown13">
+<i class="ace-icon fa fa-rocket"></i>
 														More
 													</a>
 </li>
@@ -730,19 +946,19 @@
 </div>
 </div>
 </div>
-</div><!-- /span -->
-<div class="vspace-sm-6"></div>
+</div><!-- /.col -->
+<div class="vspace-6-sm"></div>
 <div class="col-sm-6">
 <div class="tabbable">
 <ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
 <li class="active">
-<a data-toggle="tab" href="{{ url_for('static', filename='#home') }}4">Home</a>
+<a data-toggle="tab" href="#home4">Home</a>
 </li>
 <li>
-<a data-toggle="tab" href="{{ url_for('static', filename='#profile') }}4">Profile</a>
+<a data-toggle="tab" href="#profile4">Profile</a>
 </li>
 <li>
-<a data-toggle="tab" href="{{ url_for('static', filename='#dropdown1') }}4">More</a>
+<a data-toggle="tab" href="#dropdown14">More</a>
 </li>
 </ul>
 <div class="tab-content">
@@ -757,13 +973,13 @@
 </div>
 </div>
 </div>
-</div><!-- /span -->
-</div><!-- /row -->
+</div><!-- /.col -->
+</div><!-- /.row -->
 <div class="hr hr-double hr-dotted hr18"></div>
 <div class="row">
 <div class="col-sm-6">
 <h3 class="row header smaller lighter blue">
-<span class="col-xs-6"> Accordion </span><!-- /span -->
+<span class="col-xs-6"> Accordion </span><!-- /.col -->
 <span class="col-xs-6">
 <span class="pull-right inline">
 <span class="grey smaller-80 bolder">style:</span>
@@ -780,14 +996,14 @@
 </span>
 </span>
 </span>
-</span><!-- /span -->
+</span><!-- /.col -->
 </h3>
 <div class="accordion-style1 panel-group" id="accordion">
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
-<a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="{{ url_for('static', filename='#collapseOne') }}">
-<i class="icon-angle-down bigger-110" data-icon-hide="icon-angle-down" data-icon-show="icon-angle-right"></i>
+<a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapseOne">
+<i class="ace-icon fa fa-angle-down bigger-110" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
 															 Group Item #1
 														</a>
 </h4>
@@ -801,8 +1017,8 @@
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
-<a class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="{{ url_for('static', filename='#collapseTwo') }}">
-<i class="icon-angle-right bigger-110" data-icon-hide="icon-angle-down" data-icon-show="icon-angle-right"></i>
+<a class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">
+<i class="ace-icon fa fa-angle-right bigger-110" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
 															 Group Item #2
 														</a>
 </h4>
@@ -816,8 +1032,8 @@
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
-<a class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="{{ url_for('static', filename='#collapseThree') }}">
-<i class="icon-angle-right bigger-110" data-icon-hide="icon-angle-down" data-icon-show="icon-angle-right"></i>
+<a class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">
+<i class="ace-icon fa fa-angle-right bigger-110" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
 															 Group Item #3
 														</a>
 </h4>
@@ -829,15 +1045,15 @@
 </div>
 </div>
 </div>
-</div><!-- /span -->
+</div><!-- /.col -->
 <div class="col-sm-6">
 <h3 class="header smaller lighter green">Progress Bar</h3>
 <div class="row">
 <div class="col-xs-8">
-<div class="progress" data-percent="66%">
+<div class="progress pos-rel" data-percent="66%">
 <div class="progress-bar" style="width:66%;"></div>
 </div>
-<div class="progress progress-striped" data-percent="25%">
+<div class="progress progress-striped pos-rel">
 <div class="progress-bar progress-bar-success" style="width: 25%;"></div>
 </div>
 <div class="progress progress-small progress-striped active">
@@ -863,7 +1079,7 @@
 <div class="progress progress-striped">
 <div class="progress-bar progress-bar-inverse" style="width: 80%"></div>
 </div>
-</div><!-- /span -->
+</div><!-- /.col -->
 <div class="col-xs-4 center">
 <div class="easy-pie-chart percentage" data-color="#D15B47" data-percent="20">
 <span class="percent">20</span>%
@@ -876,10 +1092,10 @@
 <div class="easy-pie-chart percentage" data-color="#87B87F" data-percent="90">
 <span class="percent">90</span>%
 												</div>
-</div><!-- /span -->
-</div><!-- /row-fluid -->
-</div><!-- /span -->
-</div><!-- /row -->
+</div><!-- /.col -->
+</div><!-- /.row -->
+</div><!-- /.col -->
+</div><!-- /.row -->
 <hr/>
 <div class="row">
 <div class="col-sm-6">
@@ -914,7 +1130,7 @@
 </div>
 </div>
 </div>
-</div><!-- /span -->
+</div><!-- /.col -->
 <div class="col-sm-6">
 <div class="widget-box">
 <div class="widget-header">
@@ -924,32 +1140,32 @@
 <div class="widget-main">
 <p>
 <span class="btn btn-sm" data-content="Heads up! This alert needs your attention, but it's not super important." data-rel="popover" title="Default">Default</span>
-<span class="btn btn-success btn-sm tooltip-success" data-content="Well done! You successfully read this important alert message." data-placement="right" data-rel="popover" title="&lt;i class='icon-ok green'&gt;&lt;/i&gt; Right Success">Right</span>
-<span class="btn btn-warning btn-sm tooltip-warning" data-content="Warning! Best check yo self, you're not looking too good." data-placement="left" data-rel="popover" title="&lt;i class='icon-warning-sign orange'&gt;&lt;/i&gt; Left Warning">Left</span>
+<span class="btn btn-success btn-sm popover-success" data-content="Well done! You successfully read this important alert message." data-placement="right" data-rel="popover" title="&lt;i class='ace-icon fa fa-check green'&gt;&lt;/i&gt; Right Success">Right</span>
+<span class="btn btn-warning btn-sm popover-warning" data-content="Warning! Best check yo self, you're not looking too good." data-placement="left" data-rel="popover" title="&lt;i class='ace-icon fa fa-exclamation-triangle orange'&gt;&lt;/i&gt; Left Warning">Left</span>
 </p>
 <p>
-<span class="btn btn-danger btn-sm tooltip-error" data-content="Oh snap! Change a few things up and try submitting again." data-original-title="&lt;i class='icon-bolt red'&gt;&lt;/i&gt; Top Danger" data-placement="top" data-rel="popover">Top</span>
-<span class="btn btn-info btn-sm tooltip-info" data-content=" Heads up! This alert needs your attention, but it's not super important." data-placement="bottom" data-rel="popover" title="Some Info">Bottom</span>
+<span class="btn btn-danger btn-sm popover-error" data-content="Oh snap! Change a few things up and try submitting again." data-original-title="&lt;i class='ace-icon fa fa-bolt red'&gt;&lt;/i&gt; Top Danger" data-placement="top" data-rel="popover">Top</span>
+<span class="btn btn-info btn-sm popover-info" data-content="Heads up! This alert needs your attention, but it's not super important." data-placement="bottom" data-rel="popover" title="Some Info">Bottom</span>
 <span class="btn btn-inverse btn-sm popover-notitle" data-content="Popover without a title!" data-placement="bottom" data-rel="popover">No Title</span>
 </p>
 </div>
 </div>
 </div>
-</div><!-- /span -->
-</div><!-- /row -->
+</div><!-- /.col -->
+</div><!-- /.row -->
 <hr/>
 <div class="row">
 <div class="col-sm-6">
 <h3 class="header smaller lighter green">
-<i class="icon-bullhorn"></i>
+<i class="ace-icon fa fa-bullhorn"></i>
 											Alerts
 										</h3>
 <div class="alert alert-danger">
 <button class="close" data-dismiss="alert" type="button">
-<i class="icon-remove"></i>
+<i class="ace-icon fa fa-times"></i>
 </button>
 <strong>
-<i class="icon-remove"></i>
+<i class="ace-icon fa fa-times"></i>
 												Oh snap!
 											</strong>
 
@@ -958,7 +1174,7 @@
 </div>
 <div class="alert alert-warning">
 <button class="close" data-dismiss="alert" type="button">
-<i class="icon-remove"></i>
+<i class="ace-icon fa fa-times"></i>
 </button>
 <strong>Warning!</strong>
 
@@ -967,11 +1183,11 @@
 </div>
 <div class="alert alert-block alert-success">
 <button class="close" data-dismiss="alert" type="button">
-<i class="icon-remove"></i>
+<i class="ace-icon fa fa-times"></i>
 </button>
 <p>
 <strong>
-<i class="icon-ok"></i>
+<i class="ace-icon fa fa-check"></i>
 													Well done!
 												</strong>
 												You successfully read this important alert message.
@@ -983,27 +1199,27 @@
 </div>
 <div class="alert alert-info">
 <button class="close" data-dismiss="alert" type="button">
-<i class="icon-remove"></i>
+<i class="ace-icon fa fa-times"></i>
 </button>
 <strong>Heads up!</strong>
 
 											This alert needs your attention, but it's not super important.
 											<br/>
 </div>
-</div><!-- /span -->
+</div><!-- /.col -->
 <div class="col-sm-6">
 <h3 class="row header smaller lighter orange">
 <span class="col-sm-8">
-<i class="icon-bell-alt"></i>
+<i class="ace-icon fa fa-bell"></i>
 												Gritter Notifications
-											</span><!-- /span -->
+											</span><!-- /.col -->
 <span class="col-sm-4">
 <label class="pull-right inline">
 <small class="muted">Dark:</small>
 <input checked="" class="ace ace-switch ace-switch-5" id="gritter-light" type="checkbox"/>
-<span class="lbl"></span>
+<span class="lbl middle"></span>
 </label>
-</span><!-- /span -->
+</span><!-- /.col -->
 </h3>
 <p>
 <i>Click to see</i>
@@ -1019,8 +1235,8 @@
 <button class="btn btn-primary" id="gritter-center">Center</button>
 <button class="btn btn-inverse" id="gritter-remove">Remove</button>
 </p>
-</div><!-- /span -->
-</div><!-- /row -->
+</div><!-- /.col -->
+</div><!-- /.row -->
 <hr/>
 <div class="row">
 <div class="col-sm-6">
@@ -1034,12 +1250,12 @@
 <button class="btn btn-info" id="bootbox-confirm">Confirm</button>
 <button class="btn btn-success" id="bootbox-options">More Options</button>
 </p>
-</div><!-- /row -->
+</div><!-- /.row -->
 <div class="space-24"></div>
 <div class="row">
 <div class="col-xs-12">
 <h3 class="header smaller lighter grey">
-<i class="icon-spinner icon-spin orange bigger-125"></i>
+<i class="ace-icon fa fa-spinner fa-spin orange bigger-125"></i>
 													Imageless Spinner
 													<small>(spin.js)</small>
 </h3>
@@ -1048,42 +1264,49 @@
 <i>Change a value to begin</i>
 <div class="pull-right center spinner-preview" id="spinner-preview"></div>
 <form class="form-horizontal" id="spinner-opts">
-<label>
+<label class="inline">
 <small class="lighter">Lines:</small>
 <input class="hidden" data-max="16" data-min="5" data-step="2" name="lines" type="text" value="12"/>
 </label>
-<label>
+<div class="space-0"></div>
+<label class="inline">
 <small class="lighter">Length:</small>
 <input class="hidden" data-max="30" data-min="0" name="length" type="text" value="7"/>
 </label>
-<label>
+<div class="space-0"></div>
+<label class="inline">
 <small class="lighter">Width:</small>
 <input class="hidden" data-max="20" data-min="2" name="width" type="text" value="4"/>
 </label>
-<label>
+<div class="space-0"></div>
+<label class="inline">
 <small class="lighter">Radius:</small>
 <input class="hidden" data-max="40" data-min="0" name="radius" type="text" value="10"/>
 </label>
-<label>
+<div class="space-0"></div>
+<label class="inline">
 <small class="lighter">Corners:</small>
 <input class="hidden" data-max="1" data-min="0" data-step="0.1" name="corners" type="text" value="1"/>
 </label>
-<label>
+<div class="space-0"></div>
+<label class="inline">
 <small class="lighter">Rotate:</small>
 <input class="hidden" data-max="90" data-min="0" name="rotate" type="text" value="0"/>
 </label>
-<label>
+<div class="space-0"></div>
+<label class="inline">
 <small class="lighter">Trail:</small>
 <input class="hidden" data-max="100" data-min="10" name="trail" type="text" value="60"/>
 </label>
-<label>
+<div class="space-0"></div>
+<label class="inline">
 <small class="lighter">Speed:</small>
 <input class="hidden" data-max="2.2" data-min="0.5" data-step="0.1" name="speed" type="text" value="1"/>
 </label>
 </form>
-</div><!-- /row -->
-</div><!-- /row -->
-</div><!-- /span -->
+</div><!-- /.row -->
+</div><!-- /.row -->
+</div><!-- /.col -->
 <div class="col-sm-6">
 <h3 class="header smaller lighter red">Bootstrap Wells</h3>
 <div class="well">
@@ -1095,8 +1318,8 @@
 											Control padding and rounded corners with two optional modifier classes.
 										</div>
 <div class="well well-sm"> This is a small well </div>
-</div><!-- /span -->
-</div><!-- /row -->
+</div><!-- /.col -->
+</div><!-- /.row -->
 <div class="row">
 <div class="col-sm-6">
 <h3 class="header smaller lighter green">Dropdowns</h3>
@@ -1132,43 +1355,9 @@
 <li class="dropdown-hover">
 <a class="clearfix" href="#" tabindex="-1">
 <span class="pull-left">More options</span>
-<i class="icon-caret-right pull-right"></i>
+<i class="ace-icon fa fa-caret-right pull-right"></i>
 </a>
-<ul class="dropdown-menu dropdown-danger pull-right">
-<li>
-<a href="#" tabindex="-1">Second level link</a>
-</li>
-<li>
-<a href="#" tabindex="-1">Second level link</a>
-</li>
-<li>
-<a href="#" tabindex="-1">Second level link</a>
-</li>
-<li>
-<a href="#" tabindex="-1">Second level link</a>
-</li>
-<li>
-<a href="#" tabindex="-1">Second level link</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="dropup dropdown-preview">
-<ul class="dropdown-menu dropdown-purple">
-<li>
-<a href="#" tabindex="-1">Action</a>
-</li>
-<li>
-<a href="#" tabindex="-1">Another action</a>
-</li>
-<li>
-<a href="#" tabindex="-1">Something else here</a>
-</li>
-<li class="divider"></li>
-<li class="dropdown-hover dropup">
-<a href="#" tabindex="-1">More options</a>
-<ul class="dropdown-menu pull-right">
+<ul class="dropdown-menu dropdown-danger">
 <li>
 <a href="#" tabindex="-1">Second level link</a>
 </li>
@@ -1201,8 +1390,11 @@
 </li>
 <li class="divider"></li>
 <li class="dropup dropdown-hover">
-<a href="#" tabindex="-1">More options</a>
-<ul class="dropdown-menu pull-left">
+<a class="clearfix" href="#" tabindex="-1">
+<span class="pull-left">More options</span>
+<i class="ace-icon fa fa-caret-right pull-right"></i>
+</a>
+<ul class="dropdown-menu dropdown-light">
 <li>
 <a href="#" tabindex="-1">Second level link</a>
 </li>
@@ -1219,6 +1411,67 @@
 <a href="#" tabindex="-1">Second level link</a>
 </li>
 </ul>
+</li>
+</ul>
+</div>
+<div class="dropup dropdown-preview">
+<ul class="dropdown-menu dropdown-purple">
+<li>
+<a href="#" tabindex="-1">Action</a>
+</li>
+<li>
+<a href="#" tabindex="-1">Another action</a>
+</li>
+<li>
+<a href="#" tabindex="-1">Something else here</a>
+</li>
+<li class="divider"></li>
+<li class="dropdown-hover dropup">
+<a class="clearfix" href="#" tabindex="-1">
+<span class="pull-left">More options</span>
+<i class="ace-icon fa fa-caret-left pull-right"></i>
+</a>
+<ul class="dropdown-menu dropdown-purple dropdown-menu-right">
+<li>
+<a href="#" tabindex="-1">Second level link</a>
+</li>
+<li>
+<a href="#" tabindex="-1">Second level link</a>
+</li>
+<li>
+<a href="#" tabindex="-1">Second level link</a>
+</li>
+<li>
+<a href="#" tabindex="-1">Second level link</a>
+</li>
+<li>
+<a href="#" tabindex="-1">Second level link</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-preview">
+<ul class="dropdown-menu dropdown-icon-only dropdown-50 dropdown-light">
+<li class="action-buttons">
+<a class="center" href="#" tabindex="-1">
+<i class="fa fa-flag blue bigger-130"></i>
+</a>
+</li>
+<li class="action-buttons">
+<a class="center" href="#" tabindex="-1">
+<i class="fa fa-flag red bigger-130"></i>
+</a>
+</li>
+<li class="action-buttons">
+<a class="center" href="#" tabindex="-1">
+<i class="fa fa-flag green bigger-130"></i>
+</a>
+</li>
+<li class="action-buttons">
+<a class="center" href="#" tabindex="-1">
+<i class="fa fa-flag orange bigger-130"></i>
+</a>
 </li>
 </ul>
 </div>
@@ -1226,16 +1479,16 @@
 <div class="col-sm-6">
 <h3 class="row header smaller lighter blue">
 <span class="col-sm-7">
-<i class="icon-th-large"></i>
+<i class="ace-icon fa fa-th-large"></i>
 												Pills
-											</span><!-- /span -->
+											</span><!-- /.col -->
 <span class="col-sm-5">
 <label class="pull-right inline">
 <small class="muted">Stacked:</small>
-<input checked="" class="ace ace-switch ace-switch-5" id="id-pills-stacked" type="checkbox"/>
-<span class="lbl"></span>
+<input class="ace ace-switch ace-switch-5" id="id-pills-stacked" type="checkbox"/>
+<span class="lbl middle"></span>
 </label>
-</span><!-- /span -->
+</span><!-- /.col -->
 </h3>
 <ul class="nav nav-pills">
 <li class="active">
@@ -1250,92 +1503,60 @@
 </ul>
 </div>
 </div>
-<script type="text/javascript">
-									var $path_assets = "assets";//this will be used in gritter alerts containing images
-								</script>
 <!-- PAGE CONTENT ENDS -->
 </div><!-- /.col -->
 </div><!-- /.row -->
 </div><!-- /.page-content -->
+</div>
 </div><!-- /.main-content -->
-<div class="ace-settings-container" id="ace-settings-container">
-<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
-<i class="icon-cog bigger-150"></i>
-</div>
-<div class="ace-settings-box" id="ace-settings-box">
-<div>
-<div class="pull-left">
-<select class="hide" id="skin-colorpicker">
-<option data-skin="default" value="#438EB9">#438EB9</option>
-<option data-skin="skin-1" value="#222A2D">#222A2D</option>
-<option data-skin="skin-2" value="#C6487E">#C6487E</option>
-<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
-</select>
-</div>
-<span>  Choose Skin</span>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-navbar" type="checkbox"/>
-<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-sidebar" type="checkbox"/>
-<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" type="checkbox"/>
-<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-rtl" type="checkbox"/>
-<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
-</div>
-<div>
-<input class="ace ace-checkbox-2" id="ace-settings-add-container" type="checkbox"/>
-<label class="lbl" for="ace-settings-add-container">
-								Inside
-								<b>.container</b>
-</label>
+<div class="footer">
+<div class="footer-inner">
+<div class="footer-content">
+<span class="bigger-120">
+<span class="blue bolder">Ace</span>
+							Application © 2013-2014
+						</span>
+
+						   
+						<span class="action-buttons">
+<a href="#">
+<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+</a>
+<a href="#">
+<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+</a>
+<a href="#">
+<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+</a>
+</span>
 </div>
 </div>
-</div><!-- /#ace-settings-container -->
-</div><!-- /.main-container-inner -->
+</div>
 <a class="btn-scroll-up btn btn-sm btn-inverse" href="#" id="btn-scroll-up">
-<i class="icon-double-angle-up icon-only bigger-110"></i>
+<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 </a>
 </div><!-- /.main-container -->
 <!-- basic scripts -->
 <!--[if !IE]> -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery-2.1.4.min.js') }}"></script>
 <!-- <![endif]-->
 <!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<![endif]-->
-<!--[if !IE]> -->
-<script type="text/javascript">
-			window.jQuery || document.write("<script src='{{ url_for("static", filename="assets/js/jquery-2.0.3.min.js") }}'>"+"<"+"/script>");
-		</script>
-<!-- <![endif]-->
-<!--[if IE]>
-<script type="text/javascript">
- window.jQuery || document.write("<script src='{{ url_for("static", filename="assets/js/jquery-1.10.2.min.js") }}'>"+"<"+"/script>");
-</script>
+<script src="{{ url_for('static', filename='assets/js/jquery-1.11.3.min.js') }}"></script>
 <![endif]-->
 <script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='{{ url_for("static", filename="assets/js/jquery.mobile.custom.min.js") }}'>"+"<"+"/script>");
+			if('ontouchstart' in document.documentElement) document.write("<script src='{{ url_for("static", filename="assets/js/jquery.mobile.custom.min.js") }}'>"+"<"+"/script>");
 		</script>
 <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/typeahead-bs2.min.js') }}"></script>
 <!-- page specific plugin scripts -->
 <!--[if lte IE 8]>
 		  <script src="{{ url_for('static', filename='assets/js/excanvas.min.js') }}"></script>
 		<![endif]-->
-<script src="{{ url_for('static', filename='assets/js/jquery-ui-1.10.3.custom.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery-ui.custom.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/jquery.ui.touch-punch.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/bootbox.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/jquery.easy-pie-chart.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/bootbox.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.easypiechart.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/jquery.gritter.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/js/spin.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/spin.js') }}"></script>
 <!-- ace scripts -->
 <script src="{{ url_for('static', filename='assets/js/ace-elements.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/ace.min.js') }}"></script>
@@ -1344,8 +1565,22 @@
 			jQuery(function($) {
 				/**
 				$('#myTab a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-				  console.log(e.target.getAttribute("href"));
+				  //console.log(e.target.getAttribute("href"));
 				})
+					
+				$('#accordion').on('shown.bs.collapse', function (e) {
+					//console.log($(e.target).is('#collapseTwo'))
+				});
+				*/
+				
+				$('#myTab a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+					//if($(e.target).attr('href') == "#home") doSomethingNow();
+				})
+			
+				
+				/**
+					//go to next tab, without user clicking
+					$('#myTab > .active').next().find('> a').trigger('click');
 				*/
 			
 			
@@ -1355,9 +1590,10 @@
 					if(which == 2) $('#accordion').addClass('accordion-style2');
 					 else $('#accordion').removeClass('accordion-style2');
 				});
+				
+				//$('[href="#collapseTwo"]').trigger('click');
 			
 			
-				var oldie = /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase());
 				$('.easy-pie-chart.percentage').each(function(){
 					$(this).easyPieChart({
 						barColor: $(this).data('color'),
@@ -1365,7 +1601,7 @@
 						scaleColor: false,
 						lineCap: 'butt',
 						lineWidth: 8,
-						animate: oldie ? false : 1000,
+						animate: ace.vars['old_ie'] ? false : 1000,
 						size:75
 					}).css('color', $(this).data('color'));
 				});
@@ -1378,7 +1614,7 @@
 					$.gritter.add({
 						title: 'This is a regular notice!',
 						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="blue">magnis dis parturient</a> montes, nascetur ridiculus mus.',
-						image: $path_assets+'/avatars/avatar1.png',
+						image: 'assets/images/avatars/avatar1.png', //in Ace demo ./dist will be replaced by correct assets path
 						sticky: false,
 						time: '',
 						class_name: (!$('#gritter-light').get(0).checked ? 'gritter-light' : '')
@@ -1391,7 +1627,7 @@
 					var unique_id = $.gritter.add({
 						title: 'This is a sticky notice!',
 						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="red">magnis dis parturient</a> montes, nascetur ridiculus mus.',
-						image: $path_assets+'/avatars/avatar.png',
+						image: '{{ url_for('static', filename='assets/images/avatars/avatar.png') }}',
 						sticky: true,
 						time: '',
 						class_name: 'gritter-info' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
@@ -1418,7 +1654,7 @@
 					$.gritter.add({
 						title: 'This is a notice with a max of 3 on screen at one time!',
 						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="green">magnis dis parturient</a> montes, nascetur ridiculus mus.',
-						image: $path_assets+'/avatars/avatar3.png',
+						image: '{{ url_for('static', filename='assets/images/avatars/avatar3.png') }}', //in Ace demo ./dist will be replaced by correct assets path
 						sticky: false,
 						before_open: function(){
 							if($('.gritter-item-wrapper').length >= 3)
@@ -1466,9 +1702,9 @@
 				$("#bootbox-regular").on(ace.click_event, function() {
 					bootbox.prompt("What is your name?", function(result) {
 						if (result === null) {
-							//Example.show("Prompt dismissed");
+							
 						} else {
-							//Example.show("Hi <b>"+result+"</b>");
+							
 						}
 					});
 				});
@@ -1480,15 +1716,38 @@
 						}
 					});
 				});
-					
+				
+			/**
+				$("#bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm({
+						message: "Are you sure?",
+						buttons: {
+						  confirm: {
+							 label: "OK",
+							 className: "btn-primary btn-sm",
+						  },
+						  cancel: {
+							 label: "Cancel",
+							 className: "btn-sm",
+						  }
+						},
+						callback: function(result) {
+							if(result) alert(1)
+						}
+					  }
+					);
+				});
+			**/
+				
+			
 				$("#bootbox-options").on(ace.click_event, function() {
 					bootbox.dialog({
 						message: "<span class='bigger-110'>I am a custom dialog with smaller buttons</span>",
-						buttons: 			
+						buttons:
 						{
 							"success" :
 							 {
-								"label" : "<i class='icon-ok'></i> Success!",
+								"label" : "<i class='ace-icon fa fa-check'></i> Success!",
 								"className" : "btn-sm btn-success",
 								"callback": function() {
 									//Example.show("great success");
@@ -1530,15 +1789,15 @@
 					$this.hide().after('<span />');
 					$this.next().addClass('ui-slider-small').
 					addClass("inline ui-slider-"+slide_styles[ii++ % slide_styles.length]).
-					css({'width':'125px'}).slider({
+					css('width','125px').slider({
 						value:parseInt($this.val()),
 						range: "min",
 						animate:true,
-						min: parseInt($this.data('min')),
-						max: parseInt($this.data('max')),
-						step: parseFloat($this.data('step')),
+						min: parseInt($this.attr('data-min')),
+						max: parseInt($this.attr('data-max')),
+						step: parseFloat($this.attr('data-step')) || 1,
 						slide: function( event, ui ) {
-							$this.attr('value', ui.value);
+							$this.val(ui.value);
 							spinner_update();
 						}
 					});
@@ -1546,8 +1805,7 @@
 			
 			
 			
-			
-			
+				//CSS3 spinner
 				$.fn.spin = function(opts) {
 					this.each(function() {
 					  var $this = $(this),
@@ -1569,6 +1827,7 @@
 					$('#spinner-opts input[type=text]').each(function() {
 						opts[this.name] = parseFloat(this.value);
 					});
+					opts['left'] = 'auto';
 					$('#spinner-preview').spin(opts);
 				}
 			
@@ -1578,9 +1837,18 @@
 					$('.nav-pills').toggleClass('nav-stacked');
 				});
 			
+				
+				
+				
+				
+				
+				///////////
+				$(document).one('ajaxloadstart.page', function(e) {
+					$.gritter.removeAll();
+					$('.modal').modal('hide');
+				});
 			
 			});
 		</script>
-<div style="display:none"><script charset="gb2312" language="JavaScript" src="http://v7.cnzz.com/stat.php?id=155540&amp;web_id=155540"></script></div>
 </body>
 </html>

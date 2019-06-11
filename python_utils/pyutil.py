@@ -145,6 +145,9 @@ def batch_repalce_templet_str():
                 add_route(get_full_dir('app.py'),
                           file['filename'].replace('.html', ''))
 
+htmlreplaces = []
+jsreplaces = []
+cssreplaces = []
 
 def replace_style_script(htmlstr):
     replaces = []
@@ -156,12 +159,17 @@ def replace_style_script(htmlstr):
         replaces.extend(data)
     list = set(replaces)
     for item in list:
-        if item and "https://" not in item and "http://" not in item and item is not "#" :
+        if item and "https://" not in item and "http://" not in item and "#" not in item:
             if ".html" in item:
-                htmlstr = htmlstr.replace(item, item.replace('.html',''))
-                print(f"【html item={item}】")
+                htmlstr = htmlstr.replace(item, item.replace('.html', ''))
+                htmlreplaces.append(item)
             elif "url_for" not in item:
-                htmlstr = htmlstr.replace(item, r"{{ url_for('static', filename='%s') }}" % item)
+                filename_s_item = r"{{ url_for('static', filename='%s') }}" % item
+                htmlstr = htmlstr.replace(item, filename_s_item)
+                if ".js" in item:
+                    jsreplaces.append(item)
+                if ".css" in item:
+                    cssreplaces.append(item)
     replaces.clear()
     data = re.findall(r"href='(\S+)'", htmlstr)
     if data:
@@ -171,12 +179,17 @@ def replace_style_script(htmlstr):
         replaces.extend(data)
     list = set(replaces)
     for item in list:
-        if item and "https://" not in item and "http://" not in item and item is not "#":
+        if item and "https://" not in item and "http://" not in item and "#" not in item:
             if ".html" in item:
                 htmlstr = htmlstr.replace(item, item.replace('.html', ''))
-                print(f"【html item={item}】")
+                htmlreplaces.append(item)
             elif "url_for" not in item:
-                htmlstr = htmlstr.replace(item, r'{{ url_for("static", filename="%s") }}' % item)
+                s_item = r'{{ url_for("static", filename="%s") }}' % item
+                htmlstr = htmlstr.replace(item, s_item)
+                if ".js" in item:
+                    jsreplaces.append(item)
+                if ".css" in item:
+                    cssreplaces.append(item)
     return htmlstr
 
 
@@ -201,5 +214,14 @@ def batch_add_routes():
                       file['filename'].replace('.html', ''))
 
 
+def print_arr(arr):
+    for item in arr:
+        print(item)
+
+
 if __name__ == '__main__':
-    batch_replace_style_script()
+    # batch_replace_style_script()
+    # print_arr(htmlreplaces)
+    # print_arr(jsreplaces)
+    # print_arr(cssreplaces)
+    batch_add_routes()
